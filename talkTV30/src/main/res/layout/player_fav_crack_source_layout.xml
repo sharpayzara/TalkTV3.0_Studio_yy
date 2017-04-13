@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlayout_fav_source"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/imgbtn_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_fav_bg"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_play_fav"
+            android:visibility="gone"/>
+    </LinearLayout>
+    
+    <ImageButton
+            android:id="@+id/vod_crack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/play_fav_bg"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/standard_selected"
+            android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+    <Button
+        android:id="@+id/imgbtn_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/live_btn"
+        android:text="网络1"
+        android:textSize="12sp"
+        android:textColor="@color/live_net_state"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:visibility="gone" />
+    
+    <Button
+        android:id="@+id/imgbtn_programlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgbtn_source"
+        android:background="@drawable/live_btn"
+        android:text="节目单"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:visibility="gone" />
+    
+    <Button
+        android:id="@+id/imgbtn_changetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgbtn_programlist"
+        android:background="@drawable/live_btn"
+        android:text="换台"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

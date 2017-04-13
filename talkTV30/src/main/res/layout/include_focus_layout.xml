@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sumavision.talktv2.components.RecommendLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/focus_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <com.sumavision.talktv2.components.FocusGallery
+        android:id="@+id/pic_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/banner_pic_height" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rcmd_pic_title_layout_bg" >
+
+        <TextView
+            android:id="@+id/pic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@+id/pic_star"
+            android:ellipsize="end"
+            android:paddingBottom="3.0dip"
+            android:paddingLeft="@dimen/padding_all"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/pic_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dip"
+            android:orientation="horizontal"
+            android:paddingRight="10dip" />
+    </RelativeLayout>
+
+</com.sumavision.talktv2.components.RecommendLayout>

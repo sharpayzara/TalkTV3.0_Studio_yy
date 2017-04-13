@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/userInfo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:paddingTop="10dp" >
+
+        <!--<ImageView-->
+            <!--android:id="@+id/head_pic"-->
+            <!--android:layout_width="71dp"-->
+            <!--android:layout_height="71dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/my_headpic"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:scaleType="fitXY" />-->
+        <include
+            android:id="@+id/user_header_layout"
+            android:layout_width="71dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            layout="@layout/include_user_icon"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:ellipsize="end"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/shop_text"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_header_layout"
+            android:layout_alignRight="@id/user_header_layout"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/uc_male_selected" />
+
+        <TextView
+            android:id="@+id/signnature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:ellipsize="end"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/shop_user_login"
+            android:textColor="@color/shop_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/signnature_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signnature"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:ellipsize="end"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/shop_user_login_txt"
+            android:textColor="@color/shop_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/name"
+            android:textColor="@color/shop_text"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/login_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:drawableLeft="@drawable/login_score"
+            android:drawablePadding="5dp"
+            android:textColor="#ff9102"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/login_diamand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/login_score"
+            android:drawableLeft="@drawable/login_diamand"
+            android:drawablePadding="5dp"
+            android:textColor="#3d88d8"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/shop_pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btn_search_bg"
+            android:contentDescription="@string/app_name"
+            android:text="@string/buydiamond"
+            android:textColor="@color/btn_search_text"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

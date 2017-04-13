@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="98dip"
+            android:layout_height="133dip"
+            android:background="@drawable/pd_program_pic"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/programName"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:textColor="#444444"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/director"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/programName"
+                android:layout_marginTop="3dip" />
+
+            <TextView
+                android:id="@+id/actors"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/director" />
+
+            <TextView
+                android:id="@+id/region"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actors" />
+
+            <TextView
+                android:id="@+id/score"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/region" />
+
+            <ImageView
+                android:id="@+id/ushow_anchor"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ushow_anchor"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/ushow_anchor"
+                android:background="@null"
+                android:drawableLeft="@drawable/zan_bg"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/btn_zan_text" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/goDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/go_detail" />
+    </LinearLayout>
+
+</LinearLayout>

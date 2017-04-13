@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/loading_layout"/>
+
+    <ScrollView
+        android:id="@+id/gua_scroll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dp" >
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dip"
+                android:background="@drawable/gua_gua_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableBottom="@drawable/tip_drawable_bottom"
+                    android:gravity="left|top"
+                    android:text="@string/gua_tip_newyear"
+                    android:textColor="@color/newyear_text"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/gua_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dip"
+                    android:gravity="center_horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/errLayout_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="true" >
+
+                        <ProgressBar
+                            android:id="@+id/progressBar_prize"
+                            style="@style/base_large_progressbar_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true" />
+
+                        <TextView
+                            android:id="@+id/err_text_prize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/err_tip"
+                            android:textColor="@color/errtextcolor"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/gua_layout_re"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone" >
+
+                        <com.sumavision.talktv2.widget.EraserView
+                            android:id="@+id/eraserView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eraserLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dip" >
+
+                        <ImageView
+                            android:id="@+id/eraserLay_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="center" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="如果中奖了但不进行刮奖就退出页面，奖品将自动保存到我的礼品中"
+                    android:textColor="@color/newyear_text"
+                    android:padding="5dp"/>
+
+                <ImageButton
+                    android:id="@+id/open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/gua_open"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/festival_ensure_btn_unable"
+                android:gravity="center"
+                android:text="抽奖机会"
+                android:textColor="#782c01"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/btip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_again"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/gua_tips"
+                android:textColor="#782c01"
+                android:textSize="16sp" />
+
+            <com.sumavision.talktv2.components.StaticListView
+                android:id="@+id/reward_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btip"
+                android:layout_marginTop="20dp"
+                android:listSelector="@drawable/transparent" />
+
+            <TextView
+                android:id="@+id/explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reward_listview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="left"
+                android:text="@string/gua_tips"
+                android:textColor="@color/newyear_text"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rmcd_main_list_item_top_"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/rcmd_bottom_common_padding">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_all">
+
+        <ImageView
+            android:id="@+id/rmcd_main_list_item_top_pic"
+            android:layout_width="21dip"
+            android:layout_height="21dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rcmd_all_tips_pic"
+            android:visibility="gone" />
+
+        <!-- 栏目名 -->
+
+        <TextView
+            android:id="@+id/rmcd_main_list_item_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rmcd_main_list_item_top_pic"
+            android:maxLines="1"
+            tools:text="title"
+            android:textColor="@color/list_header_textColor"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/rmcd_main_list_item_top_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rmcd_main_list_item_top_name"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rcmd_title_tip" />
+
+    </RelativeLayout>
+
+</LinearLayout>

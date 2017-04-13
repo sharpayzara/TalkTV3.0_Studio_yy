@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/pdhp_program"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--tools:visibility="gone"-->
+        <!--android:padding="10dp">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/pdhp_source"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/pdhp_statement"-->
+            <!--android:text="聚合来源："-->
+            <!--android:textColor="@color/light_black"-->
+            <!--android:textSize="18sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/pdhp_statement"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/pdhp_source"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:text="免责声明"-->
+            <!--android:textColor="@color/navigator_bg_color"-->
+            <!--android:textSize="14sp" />-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_below="@id/pdhp_statement"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="#dddddd" />-->
+
+        <!--<com.sumavision.talktv2.components.HorizontalListView-->
+            <!--android:id="@+id/pdhp_sourcelist"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_below="@id/pdhp_source"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginTop="15dp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="@color/light_gray" />-->
+    <FrameLayout
+    android:id="@+id/hs_ad_layout"
+    android:paddingTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/hs_ad_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pdh_ad_img1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"/>
+        </FrameLayout>
+    <LinearLayout
+        android:id="@+id/pdhd_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pdhp_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/pdhp_title_more"
+                android:ellipsize="end"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="节目名称"
+                android:textColor="@color/light_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/pdhp_title_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/arrow_down" />
+
+            <TextView
+                android:id="@+id/pdhp_title_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/pdhp_title_arrow"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:text="查看详情" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pdhp_info_part1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#dddddd" />
+            <TextView
+                android:id="@+id/pdhp_text0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:text="text0 : text0"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/pdhp_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="text1 : text1"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/pdhp_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="text2 : text2"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/pdhp_text3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="text1 : text1"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/pdhp_text4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="text2 : text2"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pdhp_info_part2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/pdhp_pic"
+                android:layout_width="110dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                tools:visibility="visible"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/pdhp_dtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="节目详情"
+                android:textColor="@color/light_black"
+                android:textSize="14sp"
+                tools:visibility="visible"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/pdhp_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="节目详情内容，节目详情内容，节目详情内容，节目详情内容"
+                android:textColor="@color/light_black"
+                android:textSize="13sp"
+                tools:visibility="visible"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#dddddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/pdhp_praise_layout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_bg"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/pdhp_praise_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/pdhp_praise_view"
+                android:src="@drawable/zan_normal" />
+
+            <View
+                android:id="@+id/pdhp_praise_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/pdhp_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/pdhp_praise_view"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:text="点赞"
+                android:textColor="@color/light_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd" />
+
+        <RelativeLayout
+            android:id="@+id/pdhp_collect_layout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_bg"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/pdhp_collect_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/pdhp_collect_view"
+                android:src="@drawable/programhalf_fav_normal" />
+
+            <View
+                android:id="@+id/pdhp_collect_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/pdhp_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/pdhp_collect_view"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:focusableInTouchMode="false"
+                android:text="收藏"
+                android:textColor="@color/light_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd" />
+
+        <RelativeLayout
+            android:id="@+id/pdhp_cache_layout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_bg"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/pdhp_cache_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/pdhp_cache_view"
+                android:src="@drawable/programhalf_cache" />
+
+            <View
+                android:id="@+id/pdhp_cache_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/pdhp_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/pdhp_cache_view"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:focusableInTouchMode="false"
+                android:text="缓存"
+                android:textColor="@color/light_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

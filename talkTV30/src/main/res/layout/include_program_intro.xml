@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_intro"
+        android:layout_width="match_parent"
+        android:layout_height="131dip"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgv_pic"
+            android:layout_width="98dip"
+            android:layout_height="131dip"
+            android:background="@drawable/aadefault"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:textColor="#444444"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_director"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip" />
+
+            <TextView
+                android:id="@+id/tv_actors"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_region"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                style="@style/programdetail_txt_info_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgv_goDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/go_detail" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_source_cache"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:layout_below="@+id/layout_intro"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/imgv_source_one"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgv_source_two"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgv_source_three"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgv_source_four"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imgv_source_five"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btn_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

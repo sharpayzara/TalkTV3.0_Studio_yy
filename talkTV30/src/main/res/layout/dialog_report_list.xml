@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_bg_gift_exhange">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="广告欺诈"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/list_header_textColor"
+        android:id="@+id/drl_textView1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/menu_item_color"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="淫秽色情"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/list_header_textColor"
+        android:id="@+id/drl_textView2" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/menu_item_color"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="反动政治"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/list_header_textColor"
+        android:id="@+id/drl_textView3" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/menu_item_color"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="其他不和谐"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/list_header_textColor"
+        android:id="@+id/drl_textView4" />
+</LinearLayout>

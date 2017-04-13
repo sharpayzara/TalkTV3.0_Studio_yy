@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dianzan_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <ImageButton
+        android:id="@+id/zan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="1dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/zan_white" />
+
+    <ImageButton
+        android:id="@+id/cai"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/cai_white" />
+
+</LinearLayout>

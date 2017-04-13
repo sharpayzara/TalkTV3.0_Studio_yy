@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/c_null" >
+
+    <RelativeLayout 
+        android:id="@+id/progressBar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+	    <ProgressBar
+	        android:id="@+id/progressBar"
+	        style="@style/base_large_progressbar_style"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"/>
+	
+	    <TextView
+	        android:id="@+id/loading_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@id/progressBar"
+            tools:text="100kb/s"
+	        android:paddingLeft="8dp"
+	        android:textColor="@color/c_white"
+	        android:textSize="16sp"/>
+	</RelativeLayout>
+	<TextView
+        android:id="@+id/media_loading_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:singleLine="true"
+        android:layout_below="@id/progressBar_layout"
+        android:layout_marginTop="3dp"
+        android:text="邀请好友得VIP，享等级成长加速"
+        />
+    <TextView 
+        android:id="@+id/media_loading_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/source_video"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:visibility="visible"
+        tools:text="source"
+        android:layout_below="@id/media_loading_vip"
+        android:layout_marginTop="3dp"/>
+    
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="80dp"
+        android:layout_height="66dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/list_star_default" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/pic"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/viewercount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/name"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/rcmd_list_viercount"
+        android:drawablePadding="3dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="123123"
+        android:textColor="#7c7c7c" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/pic"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="123123"
+        android:textColor="#b01f2b"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/viewercount"
+        android:layout_toRightOf="@id/score"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="123123"
+        android:textColor="#7c7c7c"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update"
+        android:layout_toRightOf="@id/pic"
+        android:text="123123"
+        android:textColor="#7c7c7c"
+        android:textSize="14sp" />
+
+</RelativeLayout>

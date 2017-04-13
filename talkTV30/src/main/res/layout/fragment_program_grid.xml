@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray" >
+
+    <RelativeLayout
+        android:id="@+id/rel_program_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="always" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:id="@+id/base_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    layout="@layout/pd_baseinfo_layout"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/sign_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/base_layout"
+                    android:layout_marginTop="10dip"
+                    layout="@layout/include_soucre_layout"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/smstate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sign_layout"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="#ffffff"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/jujiFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smstate"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/light_gray"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip" >
+
+                    <com.sumavision.talktv2.components.StaticGridView
+                        android:id="@+id/jishu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:horizontalSpacing="12dp"
+                        android:listSelector="@drawable/transparent_background"
+                        android:numColumns="6"
+                        android:verticalSpacing="12dp" />
+                </FrameLayout>
+            </RelativeLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+        <include
+            layout="@layout/loading_layout"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/dlna_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/shuai_small"
+            android:visibility="gone" />
+
+        <WebView
+            android:id="@+id/programActivity_webView"
+            android:layout_width="1dip"
+            android:layout_height="1dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

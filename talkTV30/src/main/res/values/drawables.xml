@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="bg_default">#E9E9E9</drawable>
+    <drawable name="red">#E72722</drawable>
+    <drawable name="yellow">#FFFF00</drawable>
+    <drawable name="white">#FFFFFF</drawable>
+    <drawable name="cache_selected_gray">#A0A0A0</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+
+</resources>

@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile files('libs/alimama_banner.jar')
+    compile files('libs/alimama_container.jar')
+    compile files('libs/alimama_core.jar')
+    compile files('libs/alimama_core_h5.jar')
+    compile files('libs/alimama_core_native.jar')
+    compile files('libs/alimama_feed.jar')
+    compile files('libs/alimama_handler.jar')
+    compile files('libs/alimama_interstitial.jar')
+    compile files('libs/locate_2.1.2.jar')
+}

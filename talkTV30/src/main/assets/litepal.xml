@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="talktv_program" />
+
+    <version value="10" />
+
+    <list> 
+        <mapping class="com.sumavision.talktv2.dao.Remind"></mapping>
+        <mapping class="com.sumavision.talktv2.bean.History"></mapping>
+    </list>
+
+</litepal>

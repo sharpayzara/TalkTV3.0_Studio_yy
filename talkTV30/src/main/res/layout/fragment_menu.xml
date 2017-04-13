@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlayout_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slide_menu_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/menu_margin_left"
+        android:layout_marginTop="10dp"
+        android:clickable="true" >
+
+        <include
+            android:id="@+id/user_header_layout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            layout="@layout/include_user_icon"/>
+
+        <ImageView
+            android:id="@+id/user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_header_layout"
+            android:layout_alignRight="@id/user_header_layout"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:layout_toLeftOf="@+id/user_level"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/user_info_my_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/slide_memu_text" />
+
+        <TextView
+            android:id="@+id/user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/navigator_bg_color" />
+
+        <TextView
+            android:id="@+id/unlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:text="@string/user_info_my_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/slide_memu_text" />
+
+        <LinearLayout
+            android:id="@+id/user_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/user_name"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/user_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/exchange_icon"
+                android:drawablePadding="3dp"
+                android:textColor="@color/gift_point" />
+
+            <TextView
+                android:id="@+id/user_diamond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@drawable/diamond"
+                android:drawablePadding="3dp"
+                android:ellipsize="end"
+                android:textColor="@color/gift_point" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_line_bottom"
+        android:layout_below="@id/layout_user" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_history"
+                style="@style/slide_menu_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/slide_menu_history"
+                android:text="@string/action_history"
+                android:textSize="@dimen/slide_memu_text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_history"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_cache"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_below="@id/tv_history"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_cache"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/slide_menu_cache"
+                    android:text="@string/action_cache"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <com.sumavision.talktv2.widget.CircleImageView
+                    android:id="@+id/imgv_cache_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_cache"
+                    android:src="#E72722"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlayout_cache"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+            <View
+                android:id="@+id/temp_divider"
+                android:layout_width="match_parent"
+                android:layout_below="@id/rlayout_cache"
+                android:visibility="gone"
+                android:layout_height="10dp"/>
+            <RelativeLayout
+                android:id="@+id/rlayout_vip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_below="@id/temp_divider"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/vip_left_menu"
+                    android:text="@string/my_vip_power"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <com.sumavision.talktv2.widget.CircleImageView
+                    android:id="@+id/imgv_msg_vip"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_vip"
+                    android:src="#E72722"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/temp_vip_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rlayout_vip"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+            <RelativeLayout
+                android:id="@+id/rlayout_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_below="@+id/rlayout_vip"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/slide_menu_msg"
+                    android:text="@string/my_msg"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <com.sumavision.talktv2.widget.CircleImageView
+                    android:id="@+id/imgv_msg_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_msg"
+                    android:src="#E72722"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlayout_msg"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_fav"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_below="@id/rlayout_msg"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_fav"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/slide_menu_fav"
+                    android:text="@string/my_fav"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <com.sumavision.talktv2.widget.CircleImageView
+                    android:id="@+id/imgv_fb_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_fav"
+                    android:src="#E72722"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlayout_fav"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_space"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_height"
+                android:layout_below="@id/rlayout_fav"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_space"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/slide_menu_space"
+                    android:text="@string/my_space"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <com.sumavision.talktv2.widget.CircleImageView
+                    android:id="@+id/imgv_space_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_space"
+                    android:src="#E72722"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlayout_space"
+                android:background="@drawable/slide_menu_item_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/slide_item_bg" >
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_height"
+                    android:drawableLeft="@drawable/slide_menu_feedback"
+                    android:text="@string/feedback"
+                    android:textSize="@dimen/slide_memu_text" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_feedback"
+                    android:background="@drawable/slide_menu_item_bg"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_settings"
+                    style="@style/slide_menu_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_height"
+                    android:layout_below="@id/tv_feedback"
+                    android:drawableLeft="@drawable/slide_menu_settings"
+                    android:text="@string/settings"
+                    android:textSize="@dimen/slide_memu_text" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_statement"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/slide_item_bg"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/imgv_statem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/slide_menu_statement"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgv_statem"
+            android:text="@string/banquan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/slide_memu_text" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/menu_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layout_statement"
+        android:background="@drawable/slide_menu_item_bg"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

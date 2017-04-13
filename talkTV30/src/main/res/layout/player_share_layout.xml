@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|right"
+    android:layout_marginRight="120dp"
+    android:baselineAligned="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <TextView
+        android:id="@+id/weixin"
+        android:layout_width="166dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/np_share_text_bg"
+        android:drawableLeft="@drawable/np_share_weixin_drawable"
+        android:drawablePadding="3dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="@string/player_share_weixin"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/weixin_circle"
+        android:layout_width="166dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/np_share_text_bg"
+        android:drawableLeft="@drawable/weixin_circle"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:drawablePadding="3dp"
+        android:text="@string/player_share_weixin_circle"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/weibo"
+        android:layout_width="166dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/np_share_text_bg"
+        android:drawableLeft="@drawable/np_share_weibo_drawable"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="@string/player_share_sina"
+        android:drawablePadding="3dp"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/qzone"
+        android:layout_width="166dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/np_share_text_bg"
+        android:drawableLeft="@drawable/np_share_qzone_drawable"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:drawablePadding="3dp"
+        android:text="@string/player_share_qzone"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

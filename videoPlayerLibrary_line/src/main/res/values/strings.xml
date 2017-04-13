@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="play_err">
+        <item>视频加载不出来</item>
+        <item>视频不清晰</item>
+        <item>剧集错误</item>
+        <item>海报不清楚</item>
+        <item>演员信息错误</item>
+    </string-array>
+    
+    <string-array name="live_play_list">
+        <item>报错</item>
+        <item>画面伸缩</item>
+        <item>DLNA</item>
+    </string-array>
+    
+    <string-array name="vod_play_list">
+        <item>报错</item>
+        <item>画面伸缩</item>
+        <item>DLNA</item>
+        <item>自动播放</item>
+        <item>连续播放</item>
+    </string-array>
+
+    <string name="app_name">SumavisionPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loading_text">正在加载，请稍等&#8230;</string>
+    <string name="loading_init_text">首次使用加载播放器时间可能较长，请耐心等待</string>
+    <string name="delete">删除</string>
+    <string name="throwhistory">甩屏记录</string>
+    <string name="start_wifi">开启WIFI</string>
+    <string name="exit">退出</string>
+    <string name="start_wifi_before_throw">要甩屏，请先开启WIFI</string>
+    <string name="help_list">使用帮助</string>
+    <string name="dlna_time">暂未获取</string>
+    <string name="searching_hint">正在搜索DLNA设备,请稍等&#8230;</string>
+    <string name="device_hint">选择DLNA设备</string>
+    <string name="dlna_search_txt">搜索附近设备</string>
+    <string name="cancel_txt">取消</string>
+    <string name="dlna_not_support">暂不支持当前设备</string>
+    <string name="dlna_exit_tv">退出电视播放</string>
+    <string name="search_no_result">无搜索结果</string>
+    <string name="caching_diy_tips">Caching: 0%</string>
+    <string name="main_web_play_waiting_tips">加载中，请稍候&#8230;</string>
+    <string name="videoview_tips">正在努力为您加载，请稍候&#8230;</string>
+    <string name="player_cant_play_tips1">对不起，加载失败！</string>
+    <string name="player_cant_play_tips2">您试试加载其他节目源或</string>
+    <string name="player_cant_play_tips3">吧！</string>
+    <string name="player_back">返回</string>
+    <string name="player_share">分享</string>
+    <string name="player_share_weixin">分享到微信</string>
+    <string name="player_share_sina">分享到微博</string>
+    <string name="source_page">原始网页</string>
+    <string name="navigator_refresh">刷新</string>
+    <string name="err_tip">亲,数据加载失败\n请点击重新加载</string>
+    <string name="net_live_loading_txt">正在加载，请耐心等待</string>
+    <string name="net_line_loading_txt">正在加载最优线路 \n网络</string>
+    <string name="no_resource">暂无可用视频源</string>
+    <string name="live_failed">该节目暂时无法观看，可观看其他节目。\n10s后退出播放器</string>
+    <string name="load_failed">加载失败</string>
+    <string name="player_default_name">电视粉节目播放</string>
+    <string name="not_support_link">暂不支持此链接</string>
+    <string name="video_source">视频来源：</string>
+    <string name="full_screen_play">全屏播放</string>
+    <string name="auto_play">自动播放</string>
+    <string name="sequence_play">连续播放</string>
+	<string name="report_error">报错</string>
+</resources>

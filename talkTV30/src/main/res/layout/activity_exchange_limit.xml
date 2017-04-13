@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_default"
+    android:fitsSystemWindows="true" >
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="always"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/light_black"
+                    android:textSize="14sp" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    layout="@layout/include_max_focus_layout" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlayout_top"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/iv_desc_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="6dp"
+                    android:contentDescription="@string/app_name"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:src="@color/navigator_bg_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/iv_desc_tip"
+                    android:gravity="center_vertical"
+                    android:text="@string/exchange_score"
+                    android:textColor="@color/light_black" />
+
+                <Button
+                    android:id="@+id/btn_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/btn_cache_bg"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="@string/my_gift"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlayout_desc"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/exchange_icon"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/navigator_bg_color" />
+
+            <Button
+                android:id="@+id/btn_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rlayout_desc"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_exchange_bg"
+                android:text="@string/exchange"
+                android:textColor="@color/btn_exchange"
+                android:textSize="14sp" />
+            <RelativeLayout
+                android:id="@+id/ticket_layout"
+                android:layout_below="@id/btn_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/exchange_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/exchange_tip"
+                        android:layout_width="8dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="6dp"
+                        android:contentDescription="@string/app_name"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:src="@color/navigator_bg_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@id/exchange_tip"
+                        android:gravity="center_vertical"
+                        android:text="所需碎片"
+                        android:textColor="@color/light_black" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exchange_layout"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/icon_fragment"
+                    android:textColor="@color/navigator_bg_color" />
+
+                <Button
+                    android:id="@+id/btn_exchange_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/exchange_layout"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_exchange_bg"
+                    android:text="@string/exchange"
+                    android:textColor="@color/btn_exchange"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_ticket"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="获取方式：每日抽奖"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading_layout" />
+
+</RelativeLayout>

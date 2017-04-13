@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <ListView
+        android:id="@+id/lstView_history"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@android:color/transparent" >
+    </ListView>
+    <TextView
+        android:id="@+id/listview_history_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="暂无记录"/>
+
+    <include layout="@layout/loading_layout" />
+
+</RelativeLayout>

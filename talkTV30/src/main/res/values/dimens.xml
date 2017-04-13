@@ -1,0 +1,57 @@
+<resources>
+
+    <dimen name="recommend_header_padding">20dp</dimen>
+    <dimen name="slidingmenu_offset">70dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slide_menu_width">240dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- body content -->
+    <dimen name="body_padding_medium">10dp</dimen>
+    <dimen name="body_padding_large">10dp</dimen>
+    <dimen name="speaker_image_size">36dp</dimen>
+    <dimen name="speaker_image_padding">8dp</dimen>
+    <dimen name="vendor_image_size">100dp</dimen>
+    <dimen name="actionbar_height">45dip</dimen>
+    <dimen name="actionbar_item_height">45dip</dimen>
+    <dimen name="actionbar_item_width">45dip</dimen>
+
+    <!-- aticonBar space -->
+    <dimen name="actionbar_new_height">48dip</dimen>
+    <dimen name="actionbar_new_mleft">-6dip</dimen>
+    <dimen name="actionbar_new_mright">-3dip</dimen>
+    <dimen name="gift_text_margin_left">5dip</dimen>
+    <!-- shopping -->
+    <dimen name="shop_item_height">160dp</dimen>
+    <dimen name="shop_item_height_1">80dp</dimen>
+    <dimen name="shop_item_height_2">80dp</dimen>
+    <dimen name="shop_big_marleft">3dp</dimen>
+    <dimen name="shop_big_marright">3dp</dimen>
+    <dimen name="shop_big_padbottom">3dp</dimen>
+    <dimen name="shop_big_itempadright">3dp</dimen>
+    <dimen name="shop_big_tempadbottom">3dp</dimen>
+    <dimen name="shop_iv_pad">2dp</dimen>
+    <dimen name="shop_item_padleftright">1dp</dimen>
+    <dimen name="shop_item_scoresize">12sp</dimen>
+    <dimen name="shop_item_namesize">13sp</dimen>
+    <dimen name="shop_item_score_pad">5dp</dimen>
+    <dimen name="edit_delete_marright">10dp</dimen>
+    <dimen name="rcmd_img_height_normal">111dp</dimen>
+    <dimen name="rcmd_img_height_normal_vertical">200dp</dimen>
+    <dimen name="rcmd_img_height_little">80dp</dimen>
+    <dimen name="rcmd_horizontal_divider">2.5dp</dimen>
+    <dimen name="rcmd_bottom_common_padding">5dp</dimen>
+    <dimen name="tab_height">10dp</dimen>
+    <dimen name="menu_margin_left">20dp</dimen>
+    <dimen name="menu_height">40dp</dimen>
+    <dimen name="activity_join">72dp</dimen>
+    <dimen name="default_tab_height">40dp</dimen>
+    <dimen name="padding_all">5dp</dimen>
+    <dimen name="menu_padding_top_bottom">6dp</dimen>
+    <dimen name="banner_pic_height">165dp</dimen>
+    <dimen name="header_pic_height">60dp</dimen>
+
+    <dimen name="vip_share_space">15dp</dimen>
+
+</resources>

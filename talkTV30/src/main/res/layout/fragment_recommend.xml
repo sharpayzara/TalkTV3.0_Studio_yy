@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:gravity="center" />
+
+    <include layout="@layout/loading_layout" />
+
+    <RelativeLayout
+        android:id="@+id/nat"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="48dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/nat2"
+            android:layout_width="55dp"
+            android:layout_height="50dp" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 入口布局 -->
+    <RelativeLayout
+        android:id="@+id/rlayout"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="48dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        android:layout_marginTop="25dp" >
+
+        <!-- 入口点击图标 -->
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY" />
+
+        <!-- 入口文字 -->
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <!-- 新广告提示布局 -->
+
+        <RelativeLayout
+            android:id="@+id/newtip_area"
+            android:layout_width="28dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:gravity="right" >
+
+            <ImageView
+                android:id="@+id/newtip_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/newtip_tv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:textColor="#ffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/errLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:visibility="gone"
+    android:background="@color/half_transparent" >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/base_large_progressbar_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+    <TextView
+        android:id="@+id/err_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/errtext_pic"
+        android:gravity="center"
+        android:text="@string/err_tip"
+        android:textColor="@color/errtextcolor"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/search_shake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:background="@drawable/btn_search_bg"
+        android:text="去摇佳片碰碰运气吧~"
+        android:textColor="@color/btn_search_text"
+        android:visibility="gone"/>
+    </LinearLayout>
+</RelativeLayout>

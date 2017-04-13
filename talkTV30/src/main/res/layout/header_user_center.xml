@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="91dp"
+        android:background="@drawable/user_event_bg"
+        android:padding="10dp" >
+
+        <include
+            android:id="@+id/user_header_layout"
+            layout="@layout/include_user_icon"
+            android:layout_width="71dp"
+            android:layout_height="71dp"
+            android:layout_marginRight="10dp"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/user_header_layout"-->
+            <!--android:layout_width="71dp"-->
+            <!--android:layout_height="71dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/my_headpic"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:scaleType="fitXY" />-->
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@+id/user_header_layout"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/uc_male_selected" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@id/gender"
+            android:gravity="center_vertical"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/ou_signnature"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@drawable/btn_search_bg"
+                android:text="发私信"
+                android:textColor="@color/btn_search_text"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/btn_send_msg"
+                android:background="@drawable/btn_search_bg"
+                android:text="加关注"
+                android:textColor="@color/btn_search_text"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlayout_diamond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/user_header_layout"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/user_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/exchange_icon"
+                android:drawablePadding="3dp"
+                android:textColor="@color/gold_userspace" />
+
+            <TextView
+                android:id="@+id/user_diamond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@drawable/diamond"
+                android:drawablePadding="3dp"
+                android:ellipsize="end"
+                android:textColor="@color/diamond_userspace" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false" >
+
+        <RelativeLayout
+            android:id="@+id/layout_fans"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/my_function_fans"
+                android:textColor="@color/menu_title_color" />
+
+            <com.sumavision.talktv2.widget.CircleImageView
+                android:id="@+id/imgv_fans_tip"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/tv_fans"
+                android:src="#E72722"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_follow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/my_function_fellow"
+                android:textColor="@color/menu_title_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/my_function_comment"
+                android:textColor="@color/menu_title_color" />
+
+            <com.sumavision.talktv2.widget.CircleImageView
+                android:id="@+id/imgv_comment_tip"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/tv_comment"
+                android:src="#E72722"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/friend_search"
+                android:textColor="@color/menu_title_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

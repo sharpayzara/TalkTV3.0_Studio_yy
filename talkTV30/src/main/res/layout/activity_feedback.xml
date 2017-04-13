@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="10dp"  android:fitsSystemWindows="true"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/tv_problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/feedback_problem" />
+
+    <GridView
+        android:id="@+id/grid_problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_problem"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+    <EditText
+        android:id="@+id/content_text"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/grid_problem"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/feedback_text_bg"
+        android:gravity="top"
+        android:hint="@string/feedback_content_hint"
+        android:padding="15dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/feedback_watch_video" />
+
+    <EditText
+        android:id="@+id/edt_video_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_video_name"
+        android:layout_centerInParent="true"
+        android:background="@drawable/feedback_text_bg"
+        android:gravity="top"
+        android:hint="@string/feedback_watch_video_hint"
+        android:padding="15dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_video_name"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/feedback_phone" />
+
+    <EditText
+        android:id="@+id/edt_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_contact"
+        android:layout_centerInParent="true"
+        android:background="@drawable/feedback_text_bg"
+        android:gravity="top"
+        android:hint="@string/feedback_phone_hint"
+        android:padding="15dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/login_btn_selecter"
+        android:text="@string/submit"
+        android:textColor="@color/login_btn_color" />
+
+    <include
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

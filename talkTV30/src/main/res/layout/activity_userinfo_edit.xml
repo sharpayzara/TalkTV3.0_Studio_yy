@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/uc_edit_all"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@color/login_detail_bg" >
+
+        <RelativeLayout
+            android:id="@+id/top_left"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/head_pic"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/list_headpic_default"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-7dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ue_photo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/top_left"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/user_name"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/header"
+        android:background="@drawable/list_tag_text_normal"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/ue_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/top_line"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/edit_gender"
+            android:textColor="@color/shop_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ue_male"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/uc_male_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/gender_male"
+            android:textColor="@color/shop_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ue_female"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/uc_female_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/gender_female"
+            android:textColor="@color/shop_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_bind"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/ue_radiogroup"
+        android:background="@drawable/fav_item_odd_bg" >
+
+        <TextView
+            style="@style/menu_user_info_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:text="@string/userinfo_bind" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_email_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/rlayout_bind"
+        android:background="@drawable/fav_item_even_bg" >
+
+        <TextView
+            style="@style/menu_user_info_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:text="@string/userinfo_email_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userinfo_psd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/userinfo_email_btn"
+        android:background="@drawable/fav_item_odd_bg" >
+
+        <TextView
+            style="@style/menu_user_info_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:text="@string/userinfo_psd_title" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/userinfo_psd_btn"
+        android:background="@drawable/list_tag_text_normal"
+        android:contentDescription="@string/app_name" />
+
+    <com.andexert.library.RippleView
+        android:id="@+id/rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ripple:rv_centered="true"
+        ripple:rv_color="@color/red"
+        ripple:rv_type="rectangle"
+        ripple:rv_rippleDuration="200" >
+
+        <Button
+            android:id="@+id/zuxiao"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_btn_bg"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="@string/my_zuxiao"
+            android:textColor="@color/login_btn_color"
+            android:textSize="16sp" />
+    </com.andexert.library.RippleView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

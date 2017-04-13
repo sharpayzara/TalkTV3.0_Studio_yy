@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jishu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/text_loading_layout" />
+
+    <TextView
+        android:id="@+id/tip"
+        style="@style/pd_tip_style"
+        android:text="@string/pd_juji"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/smss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/tip"
+        android:text="@string/statement"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <com.sumavision.talktv2.components.StaticGridView
+        android:id="@+id/jishu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:cacheColorHint="@color/transparent"
+        android:horizontalSpacing="14dp"
+        android:listSelector="@drawable/transparent_background"
+        android:numColumns="5"
+        android:verticalSpacing="12dp" />
+
+</RelativeLayout>

@@ -1,0 +1,1314 @@
+<!--suppress ALL -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sumavision.talktv2"
+    android:versionCode="156"
+    android:versionName="3.1.6.0">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19"
+        tools:overrideLibrary="com.sumavision.talktv2.widget,com.sina.weibo.sdk2" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+    <!-- start add by wht -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- end add by wht -->
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.sumavision.talktv2.application.TalkTvApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/loading_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        tools:replace="android:icon">
+
+
+        <!-- pushmessage 电视粉的API_KEY -->
+        <!-- key: go7ohpmZRCW06lIHj8hKMb0c -->
+        <!-- test key: 2Xbjr62EvD8ZuGGaXmnCGCQt -->
+        <meta-data
+            android:name="api_key"
+            android:value="go7ohpmZRCW06lIHj8hKMb0c" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4fcee97a5270152e2c000073"></meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="e7c7375f325116ef96f4b0fd53836c75"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+             android:value="guanWang">
+            <!--android:value="${UMENG_CHANNEL_VALUE}" >-->
+        </meta-data>
+
+        <meta-data
+            android:name="IFLYTEK_APPKEY_AD"
+            android:value="55519088" />
+
+        <activity
+            android:name="com.wechat.tools.AdBrowser"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <service android:name="com.wechat.tools.AdService"></service>
+        <receiver android:name="com.wechat.tools.AdReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="splashAnim"
+            android:value="true" />
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityAllTranslucentNew"
+            android:windowSoftInputMode="adjustResize|stateUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityAllTranslucentNew"
+            android:windowSoftInputMode="adjustResize|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.StatementDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"></activity>
+        <activity
+            android:name=".activity.ConcertActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SlidingMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"></activity>
+        <activity
+            android:name=".activity.ProgramDetailHalfActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"></activity>
+        <activity
+            android:name=".activity.MyCacheActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="cachetvfanphone" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.DLNAControllActivity"
+            android:configChanges="screenLayout|keyboard|keyboardHidden|orientation|touchscreen"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.StbSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/ActivityAllTranslucentNew" />
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.DLNAHelpActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"></activity>
+        <activity
+            android:name="com.sumavision.talktv2.activity.UserCommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sumavision.talktv2.activity.LiveDetailActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.FansActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ProgramActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ProgramCacheActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <activity
+            android:name=".activity.ProgramDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.StarDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="LoginActivity"
+                    android:scheme="login" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.UserInfoEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.SendCommentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SpecialRecommendColumnActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 2.3.2徽章独立界面 -->
+        <activity
+            android:name=".activity.RecommendActivityActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ActivityActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityGuaActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewYearGuaActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrizeListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewYearPrizeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name=".activity.ActivityResultActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <!-- 联系人界面 -->
+        <activity
+            android:name=".activity.ContactsShareActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShakeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.UploadActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddProgramActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnspecified" />
+        <activity android:name="androidx.pluginmgr.PluginActivity" />
+        <activity
+            android:name="com.example.qr_codescan.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".activity.DialogActivityContact"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityAllTranslucentNewShare"
+            android:windowSoftInputMode="stateAlwaysVisible|stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityZhongjiangActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.sumavision.talktv2.service.PlayerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="quit_from_player" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.sumavision.talktv2.service.NetReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.SharePlatformActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityWebShowActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecommandAppActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.UserMailActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.FeedbackMailActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.UserCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyFellowingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyBadgeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.BadgeDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.HeZiWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light" />
+        <activity
+            android:name=".activity.UserFeedbackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.AddressActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.RealGoodsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.WebBrowserActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.WebAvoidPicActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.WebAvoidActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.MainWebPlayActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light" />
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.ui.PlayerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanplayurlhttp" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanplayurl" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfan" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanvideoweixin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.EmergencyStoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.EmergencyDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified"></activity>
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.MainWebPlayBlockWaitActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/ActivityAllTranslucentNew" />
+        <activity
+            android:name=".activity.PlayHistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ShareToWeixinActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ActivityAllTranslucentNew">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.BindAccountActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"></activity>
+        <activity
+            android:name=".activity.StatementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChannelDetailActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityTakePartInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SpecialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SpecialProgramActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChannelRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyGuessingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InteractiveHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlatformBindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InteractiveZoneActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.InteractiveDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ExchangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ExchangeLimitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GoodsReceiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyGiftActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShoppingHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TvfanServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopPointsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShareActivity"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name=".activity.SearchMoreActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyAccountActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PayHistoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetInitActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ForgetCheckActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.PasswdFindActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ChangeEmailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ChangePasswdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.PasswdFindSuccActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sumavision.talktv2.activity.MessageListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.sumavision.talktv2.activity.DynamicActivity" />
+        <activity
+            android:name=".activity.LibDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyFavActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name="com.sumavision.activity.PayMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"></activity>
+        <activity
+            android:name=".activity.FriendSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.HolidayResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserLevelInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebPageActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.SlidingMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"
+            android:windowSoftInputMode="adjustPan|stateUnspecified">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SlidingMainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.MyVipInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.MyVipPrivilegeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Light" />
+        <activity
+            android:name="com.sumavision.talktv.videoplayer.activity.WebPlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Sherlock.Light" />
+
+
+        <activity
+            android:name="com.sumavison.alipay.ExternalPartner"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- qq接入 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100757629" />
+            </intent-filter>
+        </activity>
+
+        <!-- end qq接入 -->
+        <service
+            android:name=".dlna.services.TalkTvDlnaService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.sumavision.talktv2.dlna.SEARCH_DEVICES" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".dlna.services.DlnaControlService" />
+        <service android:name=".service.InteractiveIntimeService" />
+        <service android:name=".service.PlayAudioService" />
+        <service android:name=".service.ChkDiamondService" />
+        <service android:name=".service.AppUpdateService" />
+        <service android:name="com.sumavision.offlinelibrary.core.DownloadService" />
+        <service android:name="com.sumavision.cachingwhileplaying.CachingWhilePlayingService" />
+        <!-- alimama -->
+        <activity
+            android:name="com.taobao.newxp.view.handler.umwall.AlimamaWall"
+            android:configChanges="keyboard|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.alimama.mobile.sdk.shell.AlimamaWall"
+            android:configChanges="keyboard|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.alimama.mobile.sdk.shell.AlimamaDetail"
+            android:configChanges="keyboard|orientation"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.taobao.munion.base.download.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService"></service>
+        <service android:name="com.alimama.mobile.sdk.shell.DownloadingService">
+            <intent-filter>
+                <action android:name="com.alimama.mobile.sdk.download.action" />
+            </intent-filter>
+        </service>
+        <!-- end alimama -->
+
+
+        <!-- PUSH SERVICE -->
+        <receiver
+            android:name="com.sumavision.talktv2.service.TvBaiduPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <receiver android:name="com.sumavision.talktv2.service.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.LiveAlertService"></service>
+
+        <!--        <service
+                    android:name="com.letv.pp.service.CdeService"
+                    android:process="com.elinkway.tvlive"  />
+                <service
+                    android:name="com.example.letvt1.TempService"
+                    android:process="com.elinkway.tvlive"  >-->
+        <service
+            android:name="com.letv.pp.service.LeService"
+            android:process="com.elinkway.tvlive"></service>
+        <!--辅助启动推送服务-->
+        <receiver android:name=".service.UserPresentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 酷狗繁星 -->
+
+        <!-- 设置个人信息 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.SetUserInformationActivity"
+            android:label="设置个人信息"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <!-- 快捷登录 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.FastLoginActivity"
+            android:label="@string/fx_fastlogin_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.NavClose.Translucent"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 手机注册 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.RegisterPhoneActivity"
+            android:label="@string/fx_registerphone_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+
+        <!-- 直播间 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.liveroom.ui.LiveRoomActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- 点歌 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.song.ui.SongMainActivity"
+            android:label="@string/fx_song_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--点歌详情页面-->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.song.ui.SongSingDetailActivity"
+            android:label="@string/fx_song_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 周星动态 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.liveroom.ui.LiveRoomWeekStarActivity"
+            android:label="@string/fx_liveroom_weekstar_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent" />
+
+        <!-- 周星动态说明 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.liveroom.ui.LiveRoomWeekStarIntroduceActivity"
+            android:label="@string/fx_liveroom_weekstar_introduce_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent" />
+
+        <!-- 广播与飞屏 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.liveroom.ui.LiveRoomFlyScreenActivity"
+            android:label="@string/fx_liveroom_flyscreen_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <!-- 星星介绍页 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.liveroom.ui.StarIntroduceActivity"
+            android:label="@string/fx_liveroom_star_introduce_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent" />
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.LoginActivity"
+            android:label="@string/fx_login_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.NavClose.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!-- 用户服务条例 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.UserServiceRegulationActivity"
+            android:label="@string/fx_login_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.NavClose.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.ModifyPassActivity"
+            android:label="@string/fx_login_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.RegisterActivity"
+            android:label="@string/fx_register_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <!-- 修改个人资料 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.UpdateUserInfoActivity"
+            android:label="@string/fx_user_update_user_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"></activity>
+
+        <!--******** 充值start ******** -->
+        <!-- 充值主界面 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.recharge.ui.RechargeActivity"
+            android:label="@string/fx_recharge_main_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 充值-银联卡 信用卡 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.recharge.ui.UnionpayActivity"
+            android:label="@string/fx_recharge_unionpay_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 充值-手机充值卡 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.recharge.ui.MobileCardActivity"
+            android:label="@string/fx_recharge_mobilecard_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 充值-支付宝 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.recharge.ui.AlipayActivity"
+            android:label="@string/fx_recharge_alipay_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!-- alipay sdk end -->
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <!-- 银联支付SDK相关end -->
+        <!--*********** 充值end ******** -->
+
+        <!-- 个人档案 - 客态 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.information.ui.GuestInformationActivity"
+            android:label="@string/fx_guest_info_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 个人档案 - 全部留言列表-->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.information.ui.MessageListActivity"
+            android:label="@string/fx_leave_message"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.user.ui.RetrievepwdActivity"
+            android:label="@string/fx_forgot_password_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!-- 相册 界面 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.photo.ui.PhotoListActivity"
+            android:label="@string/fx_photo_album"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!-- 相册 全屏预览界面 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.photo.ui.PhotoFullScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppThemePhotoFullScreen"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!-- 相册 评论列表界面 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.photo.ui.PhotoCommentListActivity"
+            android:label="@string/fx_photo_comment"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <!-- 照片裁剪 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.crop.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!-- 意见反馈与举报界面 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.information.ui.ReportAvtivity"
+            android:label="@string/fx_report_advise_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"></activity>
+
+        <!-- 我的座驾 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.mount.ui.MountMyListActivity"
+            android:label="@string/fx_mount_title"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!-- 我的粉丝列表 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.information.ui.FansListActivity"
+            android:label="@string/fx_myinfo_fans_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!-- 我的关注列表 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.information.ui.FollowsListActivity"
+            android:label="@string/fx_myinfo_follows_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 内置浏览器 -->
+        <activity
+            android:name="com.kugou.fanxing.core.modul.browser.ui.BrowserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.NavClose.Translucent" />
+
+        <activity
+            android:name="com.kugou.fanxing.modul.mainframe.ui.FanxingActivity"
+            android:label="@string/fx_app_name"
+            android:theme="@style/FXAppTheme.NoTitleBar"></activity>
+
+        <activity
+            android:name="com.kugou.fanxing.core.common.liveroom.FxCoreLiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+        <!-- 分类-某子类的列表界面 -->
+        <activity
+            android:name="com.kugou.fanxing.modul.category.ui.CategorySubListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 个人档案 - 主态 -->
+        <activity
+            android:name="com.kugou.fanxing.modul.information.ui.MyInformationActivity"
+            android:label="@string/fx_myinfo_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.Translucent"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 引导下载页 -->
+        <activity
+            android:name="com.kugou.fanxing.modul.entrance.ui.FXEntranceActivity"
+            android:label="@string/fx_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FXAppTheme.NavClose.Translucent"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="FANXING_CONFIG"
+            android:value="@string/fx_config_class" />
+        <!-- 繁星配置相关 end -->
+
+        <!-- UMS统计配置 相关-->
+        <meta-data
+            android:name="UMS_PRODUCT_ID"
+            android:value="1" />
+        <meta-data
+            android:name="UMS_PRODUCT_KEY"
+            android:value="be59c2a48f49e97f47af9b35a306e6b8" />
+        <meta-data
+            android:name="UMS_CHANNEL"
+            android:value="222" />
+        <!-- UMS统计配置 相关 end-->
+        <!-- end fanxing -->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+        <service android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false"></service>
+        <service android:name="com.sumavision.talktv2.service.GoodCommentService" />
+        <service android:name="com.sumavision.talktv2.service.AppDownloadService" />
+
+        <!--科大讯飞广告-->
+        <service android:name="com.iflytek.voiceads.update.DownloadService" />
+        <activity
+            android:name="com.iflytek.voiceads.request.IFLYBrowser"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog_Fullscreen" />
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false"></service>
+
+        <activity android:name="com.qq.e.ads.AdActivity"></activity>
+        <activity android:name="com.qq.e.ads.x"></activity>
+        <!--360聚效平台-->
+        <service
+            android:name="com.mediav.ads.sdk.service.MvService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <activity
+            android:name="com.mediav.ads.sdk.adcore.MvActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <!--flyme登陆-->
+        <activity
+            android:name="sdk.meizu.auth.ui.AuthActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- AMG开屏广告Activity -->
+        <!--<activity-->
+        <!--android:name="com.amg.activity.SpreadScreenAdActivity"-->
+        <!--android:launchMode="singleTop" >-->
+        <!--</activity>-->
+        <!--<service-->
+        <!--android:name="com.amg.service.AdSucceedService"-->
+        <!--android:enabled="true" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.amg.service.SucceedService" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+    </application>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+</manifest>

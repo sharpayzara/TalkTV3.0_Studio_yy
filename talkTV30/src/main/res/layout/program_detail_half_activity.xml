@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:fillViewport="true">
+	    <LinearLayout
+	        android:id="@+id/bottom_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <include
+	            android:focusableInTouchMode="true"
+	            android:focusable="true"
+	            layout="@layout/program_detail_half_program" />
+	        <View 
+	            android:layout_width="match_parent"
+	            android:layout_height="10dp"
+	            android:background="@color/light_gray"/>
+	        <include
+	            layout="@layout/program_detail_half_episode" />
+	        <View
+				android:id="@+id/half_taobao_line"
+	            android:layout_width="match_parent"
+	            android:layout_height="10dp"
+	            android:background="@color/light_gray"/>
+	        <include
+	            layout="@layout/taobao_layout"/>
+	        <View
+				android:id="@+id/mvad_line_view"
+	            android:layout_width="match_parent"
+	            android:layout_height="10dp"
+				android:visibility="gone"
+	            android:background="@color/light_gray"/>
+			<include
+				layout="@layout/mvad_half_detail_layout"/>
+			<View
+				android:id="@+id/half_recommend_line"
+	            android:layout_width="match_parent"
+	            android:layout_height="10dp"
+	            android:background="@color/light_gray"/>
+	        <include
+	            layout="@layout/program_detail_half_recommend"/>
+	        <View 
+	            android:layout_width="match_parent"
+	            android:layout_height="10dp"
+	            android:background="@color/light_gray"/>
+	        <include
+	            layout="@layout/program_detail_half_comment" />
+	    </LinearLayout>
+	</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+	
+    <FrameLayout 
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+    <include 
+        android:id="@+id/program_loading"
+        layout="@layout/loading_layout"/>
+</RelativeLayout>

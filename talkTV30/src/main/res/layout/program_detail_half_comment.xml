@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp">
+    
+    <RelativeLayout 
+        android:id="@+id/pdhc_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView 
+            android:id="@+id/pdhc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/light_black"
+            android:text="评论"/>
+        <TextView 
+            android:id="@+id/pdhc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/light_black"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="10">
+	    <EditText 
+	        android:id="@+id/pdhc_input"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:hint="说点什么吧"
+	        android:textSize="13sp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:maxLength="140"
+	        android:layout_weight="8"/>
+	    <Button 
+	        android:id="@+id/pdhc_send"
+	        android:layout_width="0dp"
+	        android:layout_height="40dp"
+	        android:text="发送" 
+	        android:textSize="14sp"
+	        android:layout_weight="2"
+	        android:background="@drawable/button_normal_bg"
+	        android:textColor="@color/light_black"/>
+    </LinearLayout>
+    
+    <com.sumavision.talktv2.components.StaticListView
+        android:id="@+id/pdhc_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:listSelector="@color/transparent"
+        android:dividerHeight="1dp" />
+</LinearLayout>

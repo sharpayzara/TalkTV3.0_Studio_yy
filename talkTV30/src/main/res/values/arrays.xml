@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="week_day">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+    <string-array name="fav_tab">
+        <item>视频</item>
+        <item>电视直播</item>
+    </string-array>
+    <string-array name="play_err">
+        <item>视频加载不出来</item>
+        <item>视频不清晰</item>
+        <item>剧集错误</item>
+        <item>海报不清楚</item>
+        <item>演员信息错误</item>
+    </string-array>
+    <string-array name="comment_phr">
+        <item>这个给力啊</item>
+        <item>超级给力啊!</item>
+        <item>天天向上，有木有!</item>
+        <item>囧rz</item>
+        <item>这个必须顶!</item>
+        <item>这个真可以有!</item>
+        <item>顶顶更健康!</item>
+        <item>签个到，冒个泡!</item>
+    </string-array>
+    <string-array name="problems">
+        <item>应用频繁闪退</item>
+        <item>离线缓存无法缓存</item>
+        <item>播放加载速度慢</item>
+        <item>播放卡顿严重</item>
+        <item>节目更新不及时</item>
+        <item>找不到我想看的节目</item>
+        <item>找不到功能按钮</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="no_exit_ad_list">
+        <item>huawei</item>
+    </string-array>
+    <string-array name="no_youmi_xunfei_ad_list">
+        <item>360</item>
+        <item>oppo</item>
+    </string-array>
+    <string-array name="level_name">
+        <item>LV1  初级粉友</item>
+        <item>LV2  中级粉友</item>
+        <item>LV3  高级粉友</item>
+        <item>LV4  资深粉友</item>
+        <item>LV5  大师级粉友</item>
+        <item>LV6  宗师级粉友</item>
+        <item>LV7  骨灰级粉友</item>
+        <item>LV8  传说中的粉友</item>
+        <item>VIP  特权用户</item>
+    </string-array>
+    <string-array name="level_exprience">
+        <item>0~199经验</item>
+        <item>200~999经验</item>
+        <item>1000~2999经验</item>
+        <item>3000~4999经验</item>
+        <item>5000~6999经验</item>
+        <item>7000~9999经验</item>
+        <item>10000~14999经验</item>
+        <item>15000~20000经验</item>
+        <item>敬请期待</item>
+    </string-array>
+    <string-array name="feedback_type">
+        <item>应用闪退</item>
+        <item>离线缓存</item>
+        <item>播放加载</item>
+        <item>播放卡顿</item>
+        <item>节目更新</item>
+        <item>找不到节目</item>
+        <item>找不到功能按钮</item>
+    </string-array>
+    <string-array name="video_def">
+        <item>超清</item>
+        <item>高清</item>
+        <item>标清</item>
+    </string-array>
+
+</resources>

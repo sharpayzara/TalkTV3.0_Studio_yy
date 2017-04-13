@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:gravity="center">
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fdf6c0"
+        android:padding="20dp">
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/navigator_bg_color"
+        android:text="123123123123123"/>
+    
+    <TextView 
+        android:id="@+id/earn_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="如何获取积分？"
+        android:textColor="@color/light_black"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView 
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navigator_bg_color"
+        android:textSize="14sp"
+        android:text="123123"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+    <Button 
+        android:id="@+id/ensure"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="确定"
+        android:textColor="@color/navigator_bg_color"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/score_btn"/>
+    <Button 
+        android:id="@+id/cancel"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="取消"
+        android:textColor="@color/navigator_bg_color"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/score_btn"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

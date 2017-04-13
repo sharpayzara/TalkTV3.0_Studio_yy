@@ -1,0 +1,44 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="base_large_progressbar_style">
+        <item name="android:maxWidth">38.0dip</item>
+        <item name="android:maxHeight">38.0dip</item>
+        <item name="android:indeterminateDrawable">@anim/loading_anim</item>
+        <item name="android:minWidth">38.0dip</item>
+        <item name="android:minHeight">38.0dip</item>
+    </style>
+
+    <style name="style_vod_text">
+        <item name="android:shadowColor">@color/m_radius_color</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">3.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:textColor">@color/c_white</item>
+        <item name="android:textSize">@dimen/text_time_size</item>
+    </style>
+
+    <style name="navigator_text_style">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3.0</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="base_activity_animation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+    </style>
+    
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->  
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->  
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->  
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->  
+        <item name="android:windowBackground">@null</item><!-- 自己想要的背景 -->  
+        <item name="android:backgroundDimEnabled">false</item><!-- 模糊 -->  
+    </style>
+
+</resources>

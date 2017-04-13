@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/userregister_main"
+    android:layout_width="fill_parent"  android:fitsSystemWindows="true"
+    android:layout_height="fill_parent"
+    android:background="#d6d6d6" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/register_client_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/register_client_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/my_headpic"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/login_detail_bg"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/register_edit_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:hint="@string/register_email_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textColorHint="#b2b2b2"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/email_delete_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/edit_delete_marright"
+                android:background="@drawable/login_delete"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/list_tag_text_normal"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/login_detail_bg"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/register_edit_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:hint="@string/register_user_hint"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textColorHint="#b2b2b2"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/name_delete_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/edit_delete_marright"
+                android:background="@drawable/login_delete"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/list_tag_text_normal"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/login_detail_bg"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/register_edit_passwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:hint="@string/userinfo_psd"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textColorHint="#b2b2b2"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/passwd_delete_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/edit_delete_marright"
+                android:background="@drawable/login_delete"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/list_tag_text_normal"
+            android:contentDescription="@string/app_name" />
+        <RelativeLayout
+        android:id="@+id/register_invite_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/login_detail_bg"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/register_edit_invite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:hint="VIP活动邀请码(选填)"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="#b2b2b2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/invite_delete_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/edit_delete_marright"
+            android:background="@drawable/login_delete"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/register_invite_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/list_tag_text_normal"
+            android:contentDescription="@string/app_name" />
+
+        <Button
+            android:id="@+id/register_btn_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_btn_selecter"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="@string/register_agree_login"
+            android:textColor="@color/login_btn_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/reg_read_p"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/chk_register"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/reg_p_text_txt"
+                style="@style/MyCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:text="@string/dianshifenxieyi"
+                android:textColor="@color/register_xieyi"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/reg_m_text_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/and"
+                android:textColor="#b2b2b2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/reg_f_text_txt"
+                style="@style/MyCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:paddingLeft="4dp"
+                android:text="@string/banquan"
+                android:textColor="@color/register_xieyi"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_bindoldaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/bindoldaccount" />
+
+            <Button
+                android:id="@+id/bindoldaccount_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/loginbind"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/selector_filter_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+</FrameLayout>

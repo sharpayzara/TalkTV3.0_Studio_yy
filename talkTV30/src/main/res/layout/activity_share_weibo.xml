@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/share_activity_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="253dip"
+            android:layout_height="166dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dip"
+            android:background="#ffffff"
+            android:paddingBottom="20dip" >
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="fill_parent"
+                android:layout_height="24dip"
+                android:background="@drawable/shake_top" >
+
+                <Button
+                    android:id="@+id/cancel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:background="@drawable/activity_btn"
+                    android:text="取消"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/activity_btn"
+                    android:text="@string/action_confirm"
+                    android:textColor="#ffffff" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/frame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:background="@null"
+                android:gravity="left|top"
+                android:hint="说点什么"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#444444" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

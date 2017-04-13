@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/rcmd_unit_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/rcmd_bottom_common_padding" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120.0dip"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/rcmd_main_item_pic_h" />
+
+    <LinearLayout
+        android:id="@+id/detail"
+        style="@style/rcmd_item_detail_style"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/imageView" >
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/rcmd_program_name_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/intro"
+            style="@style/rcmd_program_intro_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/rcmd_program_title_style"
+        android:layout_width="match_parent"
+        android:layout_above="@id/detail" />
+
+    <TextView
+        android:id="@+id/tv_special_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/title"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#0083fe"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/rcmd_title_special_subject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/special_flag_text"
+        android:visibility="gone" />
+
+</RelativeLayout>

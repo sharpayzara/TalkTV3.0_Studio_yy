@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_send_comment"
+        android:actionProviderClass="com.sumavision.talktv2.activity.help.TextActionProvider"
+        android:showAsAction="always"
+        android:title="@string/navigator_btn_send"/>
+
+</menu>

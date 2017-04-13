@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"  android:fitsSystemWindows="true"
+    android:layout_height="fill_parent"
+    android:background="#d6d6d6" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/statement_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:text="@string/statementcontent"
+            android:textSize="15sp" />
+    </ScrollView>
+    
+    <include layout="@layout/loading_layout"/>
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From Library_02.04.00.146_tvfan:
+* build.gradle
+From PayLibrary:
+* build.gradle
+* ic_launcher-web.png
+* proguard-project.txt
+From TalkTV3.0:
+* proguard-project.txt
+* tvfan_reversion
+* 数据库版本
+From VideoPlayerLibrary_line:
+* ic_launcher-web.png
+* proguard-project.txt
+* 播放器说明文档.doc
+From WeiboSDK:
+* proguard-project.txt
+From alipay_lib:
+* build.gradle
+* proguard-project.txt
+From cachingwhileplaying:
+* proguard-project.txt
+From offlinecachelibraryprojectTest:
+* build.gradle
+* ic_launcher-web.png
+* proguard-project.txt
+* readme.txt
+From slidingMenu_library:
+* proguard-project.txt
+From widget_library:
+* build.gradle
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.+
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+actionbarsherlock =>
+    com.actionbarsherlock:actionbarsherlock:4.4.0@aar
+    com.android.support:support-v4:19.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In Library_02.04.00.146_tvfan:
+* AndroidManifest.xml => library_020400146_tvfan\src\main\AndroidManifest.xml
+* assets\ => library_020400146_tvfan\src\main\assets\
+* libs\alipay.jar => library_020400146_tvfan\libs\alipay.jar
+* libs\analytics.jar => library_020400146_tvfan\libs\analytics.jar
+* libs\armeabi-v7a\libeffect.so => library_020400146_tvfan\src\main\jniLibs\armeabi-v7a\libeffect.so
+* libs\armeabi-v7a\libumecl.so => library_020400146_tvfan\src\main\jniLibs\armeabi-v7a\libumecl.so
+* libs\armeabi-v7a\libUMMedia.so => library_020400146_tvfan\src\main\jniLibs\armeabi-v7a\libUMMedia.so
+* libs\armeabi-v7a\libumsec.so => library_020400146_tvfan\src\main\jniLibs\armeabi-v7a\libumsec.so
+* libs\armeabi-v7a\libumutiltools.so => library_020400146_tvfan\src\main\jniLibs\armeabi-v7a\libumutiltools.so
+* libs\httpmime-4.1.3.jar => library_020400146_tvfan\libs\httpmime-4.1.3.jar
+* libs\java_websocket.jar => library_020400146_tvfan\libs\java_websocket.jar
+* libs\nineoldandroids-2.4.0.jar => library_020400146_tvfan\libs\nineoldandroids-2.4.0.jar
+* libs\params.jar => library_020400146_tvfan\libs\params.jar
+* libs\payment.jar => library_020400146_tvfan\libs\payment.jar
+* libs\umecl.jar => library_020400146_tvfan\libs\umecl.jar
+* libs\UmUtilTools.jar => library_020400146_tvfan\libs\UmUtilTools.jar
+* libs\UPPayAssistEx.jar => library_020400146_tvfan\libs\UPPayAssistEx.jar
+* libs\ushowlaunchutil.jar => library_020400146_tvfan\libs\ushowlaunchutil.jar
+* libs\UShowSdk.jar => library_020400146_tvfan\libs\UShowSdk.jar
+* res\ => library_020400146_tvfan\src\main\res\
+* src\ => library_020400146_tvfan\src\main\java\
+In PayLibrary:
+* AndroidManifest.xml => payLibrary\src\main\AndroidManifest.xml
+* assets\ => payLibrary\src\main\assets\
+* libs\alipay.jar => payLibrary\libs\alipay.jar
+* libs\codec.jar => payLibrary\libs\codec.jar
+* libs\UPPayAssistEx.jar => payLibrary\libs\UPPayAssistEx.jar
+* res\ => payLibrary\src\main\res\
+* src\ => payLibrary\src\main\java\
+In WeiboSDK:
+* AndroidManifest.xml => weiboSDK\src\main\AndroidManifest.xml
+* assets\ => weiboSDK\src\main\assets\
+* libs\weibosdkcore.jar => weiboSDK\libs\weibosdkcore.jar
+* res\ => weiboSDK\src\main\res\
+* src\ => weiboSDK\src\main\java\
+In PullToRefresh-library:
+* AndroidManifest.xml => pullToRefreshlibrary\src\main\AndroidManifest.xml
+* assets\ => pullToRefreshlibrary\src\main\assets\
+* res\ => pullToRefreshlibrary\src\main\res\
+* src\ => pullToRefreshlibrary\src\main\java\
+In alimama_library:
+* AndroidManifest.xml => alimama_library\src\main\AndroidManifest.xml
+* assets\ => alimama_library\src\main\assets\
+* libs\alimama_banner.jar => alimama_library\libs\alimama_banner.jar
+* libs\alimama_container.jar => alimama_library\libs\alimama_container.jar
+* libs\alimama_core.jar => alimama_library\libs\alimama_core.jar
+* libs\alimama_core_h5.jar => alimama_library\libs\alimama_core_h5.jar
+* libs\alimama_core_native.jar => alimama_library\libs\alimama_core_native.jar
+* libs\alimama_feed.jar => alimama_library\libs\alimama_feed.jar
+* libs\alimama_handler.jar => alimama_library\libs\alimama_handler.jar
+* libs\alimama_interstitial.jar => alimama_library\libs\alimama_interstitial.jar
+* libs\locate_2.1.2.jar => alimama_library\libs\locate_2.1.2.jar
+* res\ => alimama_library\src\main\res\
+* src\ => alimama_library\src\main\java\
+In alipay_lib:
+* AndroidManifest.xml => alipay_lib\src\main\AndroidManifest.xml
+* assets\ => alipay_lib\src\main\assets\
+* res\ => alipay_lib\src\main\res\
+* src\ => alipay_lib\src\main\java\
+In slidingMenu_library:
+* AndroidManifest.xml => slidingMenu_library\src\main\AndroidManifest.xml
+* assets\ => slidingMenu_library\src\main\assets\
+* res\ => slidingMenu_library\src\main\res\
+* src\ => slidingMenu_library\src\main\java\
+In umsocial_sdk_library_project:
+* AndroidManifest.xml => umsocial_sdk_library_project\src\main\AndroidManifest.xml
+* assets\ => umsocial_sdk_library_project\src\main\assets\
+* libs\armeabi\libbspatch.so => umsocial_sdk_library_project\src\main\jniLibs\armeabi\libbspatch.so
+* libs\httpmime-4.1.3.jar => umsocial_sdk_library_project\libs\httpmime-4.1.3.jar
+* libs\SocialSDK_QQZone_1.jar => umsocial_sdk_library_project\libs\SocialSDK_QQZone_1.jar
+* libs\SocialSDK_QQZone_2.jar => umsocial_sdk_library_project\libs\SocialSDK_QQZone_2.jar
+* libs\SocialSDK_QQZone_3.jar => umsocial_sdk_library_project\libs\SocialSDK_QQZone_3.jar
+* libs\SocialSDK_WeiXin_1.jar => umsocial_sdk_library_project\libs\SocialSDK_WeiXin_1.jar
+* libs\SocialSDK_WeiXin_2.jar => umsocial_sdk_library_project\libs\SocialSDK_WeiXin_2.jar
+* libs\umeng-analytics-v5.2.4.jar => umsocial_sdk_library_project\libs\umeng-analytics-v5.2.4.jar
+* libs\umeng_social_sdk.jar => umsocial_sdk_library_project\libs\umeng_social_sdk.jar
+* res\ => umsocial_sdk_library_project\src\main\res\
+* src\ => umsocial_sdk_library_project\src\main\java\
+In widget_library:
+* AndroidManifest.xml => widget_library\src\main\AndroidManifest.xml
+* assets\ => widget_library\src\main\assets\
+* libs\nineoldandroids-2.4.0.jar => widget_library\libs\nineoldandroids-2.4.0.jar
+* libs\qhgm_ad_v1.3.3.pro.jar => widget_library\libs\qhgm_ad_v1.3.3.pro.jar
+* res\ => widget_library\src\main\res\
+* src\ => widget_library\src\main\java\
+In offlinecachelibraryprojectTest:
+* AndroidManifest.xml => offlinecachelibraryprojectTest\src\main\AndroidManifest.xml
+* assets\ => offlinecachelibraryprojectTest\src\main\assets\
+* libs\eventbus.jar => offlinecachelibraryprojectTest\libs\eventbus.jar
+* libs\IDynamic.jar => offlinecachelibraryprojectTest\libs\IDynamic.jar
+* libs\universal-image-loader-1.9.2-with-sources.jar => offlinecachelibraryprojectTest\libs\universal-image-loader-1.9.2-with-sources.jar
+* lint.xml => offlinecachelibraryprojectTest\lint.xml
+* res\ => offlinecachelibraryprojectTest\src\main\res\
+* src\ => offlinecachelibraryprojectTest\src\main\java\
+In cachingwhileplaying:
+* AndroidManifest.xml => cachingwhileplaying\src\main\AndroidManifest.xml
+* assets\ => cachingwhileplaying\src\main\assets\
+* libs\eventbus.jar => cachingwhileplaying\libs\eventbus.jar
+* res\ => cachingwhileplaying\src\main\res\
+* src\ => cachingwhileplaying\src\main\java\
+In VideoPlayerLibrary_line:
+* AndroidManifest.xml => videoPlayerLibrary_line\src\main\AndroidManifest.xml
+* assets\ => videoPlayerLibrary_line\src\main\assets\
+* libs\armeabi-v7a\libcyberplayer-core.so => videoPlayerLibrary_line\src\main\jniLibs\armeabi-v7a\libcyberplayer-core.so
+* libs\armeabi-v7a\libcyberplayer.so => videoPlayerLibrary_line\src\main\jniLibs\armeabi-v7a\libcyberplayer.so
+* libs\cyberplayer-sdk.jar => videoPlayerLibrary_line\libs\cyberplayer-sdk.jar
+* libs\dlna_framework.jar => videoPlayerLibrary_line\libs\dlna_framework.jar
+* libs\dlna_library.jar => videoPlayerLibrary_line\libs\dlna_library.jar
+* libs\jsoup-1.7.2.jar => videoPlayerLibrary_line\libs\jsoup-1.7.2.jar
+* libs\litepal_tvfan.jar => videoPlayerLibrary_line\libs\litepal_tvfan.jar
+* libs\universal-image-loader-1.9.2-with-sources.jar => videoPlayerLibrary_line\libs\universal-image-loader-1.9.2-with-sources.jar
+* res\ => videoPlayerLibrary_line\src\main\res\
+* src\ => videoPlayerLibrary_line\src\main\java\
+In TalkTV3.0:
+* bs.GIF => bs.gif
+* by.GIF => by.gif
+* bz.GIF => bz.gif
+* cj.GIF => cj.gif
+* cool.GIF => cool.gif
+* dk.GIF => dk.gif
+* AndroidManifest.xml => talkTV30\src\main\AndroidManifest.xml
+* assets\ => talkTV30\src\main\assets\
+* libs\armeabi-v7a\libbdpush_V2_2.so => talkTV30\src\main\jniLibs\armeabi-v7a\libbdpush_V2_2.so
+* libs\armeabi-v7a\libtvfan_encrypt.so => talkTV30\src\main\jniLibs\armeabi-v7a\libtvfan_encrypt.so
+* libs\armeabi-v7a\libwebp-23.so => talkTV30\src\main\jniLibs\armeabi-v7a\libwebp-23.so
+* libs\armeabi-v7a\libwebp-41.so => talkTV30\src\main\jniLibs\armeabi-v7a\libwebp-41.so
+* libs\eventbus.jar => talkTV30\libs\eventbus.jar
+* libs\pushservice-4.3.0.4.jar => talkTV30\libs\pushservice-4.3.0.4.jar
+* res\ => talkTV30\src\main\res\
+* src\ => talkTV30\src\main\java\
+* fn.GIF => fn.gif
+* gg.GIF => gg.gif
+* good.GIF => good.gif
+* han.GIF => han.gif
+* hand.GIF => hand.gif
+* hehe.GIF => hehe.gif
+* hh.GIF => hh.gif
+* hua.GIF => hua.gif
+* huaxin.GIF => huaxin.gif
+* hx.GIF => hx.gif
+* jk.GIF => jk.gif
+* keai.GIF => keai.gif
+* kiss.GIF => kiss.gif
+* kun.GIF => kun.gif
+* lei.GIF => lei.gif
+* money.GIF => money.gif
+* moon.GIF => moon.gif
+* ok.GIF => ok.gif
+* pz.GIF => pz.gif
+* ruo.GIF => ruo.gif
+* sad.GIF => sad.gif
+* shit.GIF => shit.gif
+* sj.GIF => sj.gif
+* sk.GIF => sk.gif
+* sw.GIF => sw.gif
+* tp.GIF => tp.gif
+* tu.GIF => tu.gif
+* tx.GIF => tx.gif
+* wq.GIF => wq.gif
+* xin.GIF => xin.gif
+* xu.GIF => xu.gif
+* yeah.GIF => yeah.gif
+* yun.GIF => yun.gif
+* yw.GIF => yw.gif
+* zgl.GIF => zgl.gif
+* zj.GIF => zj.gif
+* zk.GIF => zk.gif
+* zt.GIF => zt.gif
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+D:\Program Files\adt-bundle-windows-x86_64-20140702\sdk
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

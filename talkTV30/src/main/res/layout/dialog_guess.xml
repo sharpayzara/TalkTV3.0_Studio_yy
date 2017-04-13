@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/half_transparent" >
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/guess_margin"
+            android:layout_marginTop="@dimen/guess_margin"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/guess_close" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close"
+            android:layout_marginBottom="@dimen/guess_margin"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/guess_margin"
+            android:textColor="@color/white" />
+
+        <RadioGroup
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/option_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/guess_chk_option"
+                android:button="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/option_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/guess_chk_option"
+                android:button="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" />
+
+            <RadioButton
+                android:id="@+id/option_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/guess_chk_option"
+                android:button="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/bet_number"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/options"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="5dp"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_unenable_bg"
+            android:inputType="number" />
+
+        <ImageView
+            android:id="@+id/pic_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/bet_number"
+            android:layout_below="@id/options"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="28dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/diamond" />
+
+        <TextView
+            android:id="@+id/odds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options"
+            android:layout_marginTop="26dp"
+            android:layout_toRightOf="@id/bet_number"
+            android:gravity="center_vertical"
+            android:text="@string/bet_odds"
+            android:textColor="@color/guess_point"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bet_number"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/bet_tip"
+            android:textSize="@dimen/gift_receiver_text_small" />
+
+        <TextView
+            android:id="@+id/total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bet_number"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tip"
+            android:textSize="@dimen/gift_receiver_text_small" />
+
+        <TextView
+            android:id="@+id/bet_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bet_number"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/total_count"
+            android:text="@string/gold"
+            android:textSize="@dimen/gift_receiver_text_small" />
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/bet_number"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/go_pay" />
+
+        <Button
+            android:id="@+id/btn_bet"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_btn_bet"
+            android:text="@string/bet"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/btn_bet" />
+    </RelativeLayout>
+
+    <include layout="@layout/loading_layout" />
+
+</RelativeLayout>

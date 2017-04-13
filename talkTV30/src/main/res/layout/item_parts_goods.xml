@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp">
+    <ImageView
+        android:id="@+id/parts_goods_img"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/parts_goods_img">
+        <View
+            android:id="@+id/parts_goods_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/parts_goods_name"
+            tools:text="name"
+            android:layout_toLeftOf="@+id/parts_goods_count"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@+id/parts_goods_view"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/parts_goods_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="aldfjaldj"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/parts_goods_view"/>
+        <TextView
+            android:id="@+id/parts_goods_count"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@+id/parts_goods_name"
+            tools:text="3张"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</RelativeLayout>

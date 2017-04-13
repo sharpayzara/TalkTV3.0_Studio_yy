@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="c_null">#00000000</color>
+    <color name="c_white">#ffffff</color>
+    <color name="c_light_white">#f8f8f8</color>
+    <color name="c_black">#000000</color>
+    <color name="c_yellow">#FFFF00</color>
+    <color name="avoid_play_pressed">#2c2e33</color>
+    <color name="c_gray">#797979</color>
+    <color name="c_gray_1">#333</color>
+    <color name="c_blue">#066cab</color>
+    <color name="c_green_title">#45bc7f</color>
+    <color name="m_date_color">#ffa9a9a9</color>
+    <color name="m_date_color2">#55cccccc</color>
+    <color name="m_radius_color">#000000</color>
+    <color name="c_red">#E72722</color>
+    <color name="c_transparent">#00ffffff</color>
+    <color name="player_title_color">#ffffff</color>
+    <color name="navigator_bg_color">#b43622</color>
+    <color name="activity_bg_color">#e9e9e9</color>
+    <color name="source_video">#3bbee8</color>
+
+</resources>

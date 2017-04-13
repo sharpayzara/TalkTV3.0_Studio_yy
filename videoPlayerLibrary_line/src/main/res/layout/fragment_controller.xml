@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/controller_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/np_l_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/player_title_bg" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/new_back"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:text="@string/player_back"
+            android:textColor="@color/player_title_color" />
+
+        <LinearLayout
+            android:id="@+id/power_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingRight="5dip" >
+
+            <ImageView
+                android:id="@+id/battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textColor="@color/c_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/live_tv_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/power_time_layout"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/player_more"
+            android:visibility="gone" />
+
+        <com.sumavision.talktv2.widget.RedTipTextView2
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/live_tv_err"
+            android:contentDescription="@string/app_name"
+            android:drawableLeft="@drawable/player_share"
+            android:text="有奖分享"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:minEms="4"
+            app:redTipsVisibility="visible"
+            android:paddingRight="5dp"
+            android:background="@drawable/selector_collect_text"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+        <!--<ImageButton-->
+            <!--android:id="@+id/share"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/live_tv_err"-->
+            <!--android:background="@null"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:src="@drawable/player_share"-->
+            <!--android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/share"
+            android:background="@drawable/play_err_bg"
+            android:text="报错"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/crack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_error"
+            android:background="@drawable/standard_def"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/fav_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/share"
+            android:contentDescription="@string/app_name"
+            android:drawableLeft="@drawable/channel_uncollected"
+            android:text="收藏频道"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:minEms="4"
+            android:paddingRight="5dp"
+            android:background="@drawable/selector_collect_text"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/np_live_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fav_channel"
+            android:layout_toRightOf="@id/btn_back"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/player_title_color"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ViewStub
+        android:id="@+id/controller_live_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout="@layout/live_controller"
+        android:visibility="gone" />
+
+    <ViewStub
+        android:id="@+id/controller_vod_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/vod_controller" />
+
+    <LinearLayout
+        android:id="@+id/vol_layout"
+        android:layout_width="50dip"
+        android:layout_height="180dip"
+        android:layout_above="@+id/controller_vod_stub"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/fp_sound_bg_pic"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:visibility="gone" >
+
+        <com.sumavision.talktv.videoplayer.ui.VerticalSeekBarMusic
+            android:id="@+id/vol"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light"
+            android:thumb="@drawable/fp_soundthumb"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:src="#00000000" />
+    <!-- 加大屏幕锁定按钮 -->
+
+    <ImageButton
+        android:id="@+id/lock_big"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/liveplaye_bigr_unlock"
+        android:visibility="gone" />
+
+    <!-- 播放错误提示 -->
+
+    <RelativeLayout
+        android:id="@+id/np_l_error_tips_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_marginTop="50dp"
+        android:background="@color/c_black"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/np_l_error_tips_layout_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/c_transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/videoview_cantplay_logo" />
+
+        <TextView
+            android:id="@+id/np_l_error_tips_layout_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/np_l_error_tips_layout_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/player_cant_play_tips1"
+            android:textColor="@color/player_title_color"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/np_l_error_tips_layout_txt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_cant_play_tips2"
+                android:textColor="@color/player_title_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/np_l_error_tips_layout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/c_transparent"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/videoview_cantplay_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_cant_play_tips3"
+                android:textColor="@color/player_title_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/np_l_top_layout_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 视频顶部标题栏 -->
+
+        <RelativeLayout
+            android:id="@+id/sourcelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#7F000000"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/sourceurl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:paddingLeft="5dp"
+                android:textColor="@color/c_white" />
+
+            <TextView
+                android:id="@+id/sourceurlbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="#00000000"
+                android:paddingRight="5dp"
+                android:text="@string/source_page"
+                android:textColor="#f67979" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/crack_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="45dip"
+            android:baselineAligned="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageButton
+                android:id="@+id/crack_top"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/np_share_text_bg"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/standard_def" />
+
+            <ImageButton
+                android:id="@+id/crack_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/np_share_text_bg"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/high_false" />
+
+            <ImageButton
+                android:id="@+id/crack_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/np_share_text_bg"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/super_false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gesture_vis"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/controller_vod_stub"
+        android:layout_below="@id/np_l_top_layout_rel"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gesture_gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/first_touch_id_ref"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/first_touch_guide" />
+
+    <RelativeLayout
+        android:id="@+id/gesturelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="120dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mainpage_more_btn_normalnew"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/gesturelayout_iv_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/gesture_middle_light"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dip"
+            android:textColor="@color/c_white"
+            android:textSize="@dimen/emergency_story_title_txtsize" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_err"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/np_l_top_layout"
+        android:layout_marginRight="74dp"
+        android:layout_marginTop="16dp"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:visibility="gone" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/list_live"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/np_l_top_layout"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:visibility="gone" >
+    </ListView>
+
+    <ImageView
+        android:id="@+id/media_start_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:src="@drawable/start_play"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/media_error_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/media_error_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_prize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/media_error_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="加载失败"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/media_error_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:src="@drawable/reload_button" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

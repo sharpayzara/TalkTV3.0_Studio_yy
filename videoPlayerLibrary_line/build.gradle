@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile project(':cachingwhileplaying')
+    compile files('libs/cyberplayer-sdk.jar')
+    compile files('libs/dlna_framework.jar')
+    compile files('libs/dlna_library.jar')
+    compile files('libs/jsoup-1.7.2.jar')
+    compile files('libs/litepal-1.2.0.jar')
+//    compile files('libs/com.exatech.p2p.jar')
+    compile files('libs/com.vbyte.p2p.jar')
+    compile files('libs/tvatap2plib.jar')
+
+//    compile project(':LetvT3')
+}

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pd_bg" >
+
+    <ListView
+        android:id="@+id/offline_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="5dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/offline_no_content_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/offline_cache_center_cached_tips_img"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cache_center_download" />
+
+        <ImageView
+            android:id="@+id/offline_cache_center_cached_tips_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cache_center_caching_tips" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#7fffffff"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#80555555"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@anim/offline_loading_anim"
+                android:maxHeight="36dp"
+                android:maxWidth="36dp"
+                android:minHeight="36dp"
+                android:minWidth="36dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="正在处理，请稍候..."
+                android:textColor="#555555" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

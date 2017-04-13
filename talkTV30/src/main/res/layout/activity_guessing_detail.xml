@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lable"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/abs__tab_indicator_ab_holo"
+            android:gravity="center"
+            android:text="@string/pd_comment"
+            android:textColor="@color/base_action_bar_overflow_list_item_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/guessing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/abs__tab_indicator_ab_holo"
+            android:gravity="center"
+            android:text="@string/interest_guessing"
+            android:textColor="@color/base_action_bar_overflow_list_item_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/abs__tab_indicator_ab_holo"
+            android:gravity="center"
+            android:text="@string/pd_video"
+            android:textColor="@color/base_action_bar_overflow_list_item_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/btn_interactive_comment"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/navigator_btn_send"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/send"
+            android:background="@drawable/bg_edttxt"
+            android:hint="@string/guess_comment_input_tip"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:maxLines="3"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/send_comment_layout"
+        android:layout_below="@id/lable"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/interact_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/inter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/interaction_text_wait" />
+
+        <ImageView
+            android:id="@+id/inter_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <include layout="@layout/loading_layout" />
+
+</RelativeLayout>

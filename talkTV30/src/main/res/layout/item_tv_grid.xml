@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" 
+        android:background="@drawable/item_programhalf">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pd_tv_item_bg"
+            android:gravity="center"
+            android:text="34"
+            android:textColor="@color/program_grid_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/textView"
+            android:layout_alignBottom="@id/textView"
+            android:text="已缓"
+            android:textSize="10sp"
+            android:textColor="@color/color_cache" />
+    </RelativeLayout>
+
+</RelativeLayout>

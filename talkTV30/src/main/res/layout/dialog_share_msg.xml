@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/navigator_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backss1"
+            android:background="@color/transparent"
+            android:text="@string/navigator_zhuiju" />
+
+        <ImageView
+            android:id="@+id/backss1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/actionbar_new_mleft"
+            android:layout_marginRight="@dimen/actionbar_new_mright"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/back_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact_layout_re"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <Button
+            android:id="@+id/backss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-6dp"
+            android:background="@drawable/back_btn" />
+
+        <ImageView
+            android:id="@+id/backss_iv"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/backss"
+            android:src="@drawable/activity_contants_list_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/backss_iv"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contact_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="@string/navigator_zhuiju"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/contact_usernum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="@string/navigator_zhuiju"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="253dip"
+        android:layout_height="166dip"
+        android:layout_below="@+id/contact_layout_re"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dip"
+        android:background="#ffffff"
+        android:paddingBottom="20dip" >
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="24dip"
+            android:background="@drawable/shake_top" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="24dip"
+                android:background="@drawable/shake_top" >
+
+                <Button
+                    android:id="@+id/dialog_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/activity_set_btn"
+                    android:text="取消"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/dialog_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/activity_set_btn"
+                    android:text="确定"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/dialog_send"
+                    android:layout_toRightOf="@id/dialog_back"
+                    android:background="@drawable/activity_send_title"
+                    android:text="内容分享"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/dialog_edittxt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/frame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="说点什么"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#444444"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

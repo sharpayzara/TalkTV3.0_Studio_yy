@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/tips_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/pd_text_divider_df" />
+
+    <TextView
+        android:id="@+id/tips_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tips_img"
+        android:background="@android:color/transparent"
+        android:text="@string/program_cache_episode_tips1"
+        android:textColor="@color/base_color_balck"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tips_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tips_txt1"
+        android:background="@android:color/transparent"
+        android:text="@string/program_cache_episode_tips2"
+        android:textColor="@color/base_color_balck"
+        android:textSize="14sp" />
+
+</RelativeLayout>

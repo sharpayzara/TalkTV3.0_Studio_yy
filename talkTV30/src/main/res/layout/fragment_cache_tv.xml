@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="always" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <RelativeLayout
+            android:id="@+id/tip"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/tips_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/pd_text_divider_df" />
+
+            <TextView
+                android:id="@+id/tips_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tips_img"
+                android:background="@android:color/transparent"
+                android:text="@string/program_cache_episode_tips1"
+                android:textColor="@color/base_color_balck"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tips_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tips_txt1"
+                android:background="@android:color/transparent"
+                android:text="@string/program_cache_episode_tips2"
+                android:textColor="@color/base_color_balck"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.sumavision.talktv2.components.StaticGridView
+            android:id="@+id/jishu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="@color/transparent"
+            android:horizontalSpacing="12dp"
+            android:listSelector="@drawable/transparent_background"
+            android:numColumns="6"
+            android:verticalSpacing="12dp" />
+    </RelativeLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

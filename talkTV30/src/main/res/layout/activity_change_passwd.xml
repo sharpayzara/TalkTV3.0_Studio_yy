@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/oldpsd_init_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@color/login_detail_bg" >
+
+        <EditText
+            android:id="@+id/psd_init_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/userinfo_oldpsd_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/forget_check_text"
+            android:textColorHint="@color/forget_hint"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/oldpsd_delete_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/login_delete"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/email_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/oldpsd_init_ll"
+        android:background="@drawable/list_tag_text_normal"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:id="@+id/newpsd_init_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/email_line"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/login_detail_bg" >
+
+        <EditText
+            android:id="@+id/newpsd_init_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/userinfo_newpsd_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/forget_check_text"
+            android:textColorHint="@color/forget_hint"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/psd_delete_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/login_delete"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/newemail_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/newpsd_init_ll"
+        android:background="@drawable/list_tag_text_normal"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:id="@+id/checkpsd_init_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/newemail_line"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/login_detail_bg" >
+
+        <EditText
+            android:id="@+id/checkpsd_init_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/userinfo_psdcheck_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/forget_check_text"
+            android:textColorHint="@color/forget_hint"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/checkpsd_delete_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/login_delete"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sure_btn_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/checkpsd_init_ll"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_btn_selecter"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:text="@string/userinfo_makesure"
+        android:textColor="@color/login_btn_color"
+        android:textSize="16sp" />
+
+    <include
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

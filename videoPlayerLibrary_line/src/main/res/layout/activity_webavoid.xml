@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webbrowser_all"
+    android:layout_width="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="fill_parent"
+    android:background="#d6d6d6" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_layout" >
+
+        <WebView
+            android:id="@+id/wbb"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true" />
+        <TextView
+            android:id="@+id/web_tip_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="正在跳转，请稍候..."
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/webplay1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/webplayback"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/urlold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/c_white" />
+
+            <ImageView
+                android:id="@+id/urlbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/avoid_play_bg"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_horizontal"
+                android:paddingBottom="6dp"
+                android:src="@drawable/webplaybtn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

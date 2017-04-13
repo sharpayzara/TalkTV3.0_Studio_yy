@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QR_CodeScan</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="scan_text">将二维码放入框内</string>
+    <string name="scan_intro">将影片地址在http://sao.tvfan.cn中生成二维码后扫描</string>
+
+</resources>

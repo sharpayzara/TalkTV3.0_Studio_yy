@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="slide_memu_text">24sp</dimen>
+    <dimen name="menu_height">80dp</dimen>
+    <dimen name="menu_padding_top_bottom">12dp</dimen>
+    <dimen name="slidingmenu_offset">200dp</dimen>
+    <dimen name="banner_pic_height">320dp</dimen>
+    <dimen name="header_pic_height">120dp</dimen>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="slide_animation_duration">300</integer>
+    <integer name="fade_animation_duration">300</integer>
+    <integer name="num_cols">1</integer>
+    <integer name="tab_text_size">14</integer>
+    <integer name="comment_text_length">140</integer>
+
+</resources>

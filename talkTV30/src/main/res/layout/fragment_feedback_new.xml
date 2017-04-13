@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="always"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/rcmd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:focusableInTouchMode="true"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/feedback_problem" />
+
+            <com.sumavision.talktv2.components.StaticGridView
+                android:id="@+id/grid_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                tools:visibility="gone"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"/>
+
+            <EditText
+                android:id="@+id/content_text"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/feedback_text_bg"
+                android:gravity="top"
+                android:hint="@string/feedback_content_hint"
+                android:padding="15dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_video_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/feedback_watch_video" />
+
+            <EditText
+                android:id="@+id/edt_video_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feedback_text_bg"
+                android:gravity="top"
+                android:hint="@string/feedback_watch_video_hint"
+                android:padding="15dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/feedback_phone" />
+
+            <EditText
+                android:id="@+id/edt_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feedback_text_bg"
+                android:gravity="top"
+                android:hint="@string/feedback_phone_hint"
+                android:padding="15dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_selecter"
+                android:text="@string/submit"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/login_btn_color" />
+            <TextView
+                android:id="@+id/feedback_questions_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:text="常见问题"/>
+            <TextView
+                android:id="@+id/feedback_questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="this is a question"/>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <include layout="@layout/loading_layout" />
+
+</LinearLayout>

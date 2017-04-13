@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/rcmd_bottom_common_padding"
+    android:paddingLeft="@dimen/padding_all"
+    android:paddingRight="@dimen/padding_all" >
+
+    <com.sumavision.talktv2.components.FilterImageView
+        android:id="@+id/content_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/banner_pic_height"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/type_icon"
+        android:layout_width="54.0dip"
+        android:layout_height="54.0dip"
+        android:layout_alignLeft="@+id/content_pic"
+        android:layout_alignTop="@+id/content_pic"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

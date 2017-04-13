@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"  android:fitsSystemWindows="true"
+    android:layout_height="match_parent" >
+
+    <com.sumavision.talktv2.widget.PagerSlidingTabStrip
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_tab_height"
+        app:pstsDividerColor="@color/transparent"
+        app:pstsIndicatorHeight="4dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabPaddingLeftRight="5dp"
+        app:pstsUnderlineHeight="1dp" />
+
+    <com.sumavision.talktv2.components.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabs" />
+
+    <ImageButton
+        android:id="@+id/dlna_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/shuai_small"
+        android:visibility="gone" />
+    
+    <RelativeLayout 
+        android:id="@+id/youmi_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#80000000">
+        <RelativeLayout 
+            android:id="@+id/youmiad_layout"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:background="@color/white">
+        </RelativeLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignLeft="@id/youmiad_layout"
+            android:layout_alignRight="@id/youmiad_layout"
+            android:layout_below="@id/youmiad_layout"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:weightSum="2">
+            <Button 
+                android:id="@+id/youmi_quit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:background="@drawable/button_normal_bg"
+                android:textSize="14sp"
+                android:text="退出应用"/>
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/blue"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"/>
+            <Button 
+                android:id="@+id/youmi_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/blue"
+                android:background="@drawable/button_normal_bg"
+                android:text="去看看 >"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

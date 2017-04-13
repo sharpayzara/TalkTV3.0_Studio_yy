@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    android:paddingLeft="@dimen/padding_all"
+    android:paddingRight="@dimen/padding_all"
+    android:paddingTop="@dimen/padding_all" >
+
+    <RelativeLayout
+        android:id="@+id/layout_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="@dimen/rcmd_horizontal_divider"
+        android:layout_weight="1" >
+
+        <com.sumavision.talktv2.components.ResizableImageView
+            android:id="@+id/imagv_pic_left"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rcmd_img_height_normal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_intro_left"
+            style="@style/rcmd_program_title_style"
+            android:layout_width="match_parent"
+            android:layout_alignBottom="@id/imagv_pic_left" />
+
+        <TextView
+            android:id="@+id/tv_title_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagv_pic_left"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/light_black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/rcmd_horizontal_divider"
+        android:layout_weight="1" >
+
+        <com.sumavision.talktv2.components.ResizableImageView
+            android:id="@+id/imagv_pic_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rcmd_img_height_normal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_intro_right"
+            style="@style/rcmd_program_title_style"
+            android:layout_width="match_parent"
+            android:layout_alignBottom="@id/imagv_pic_right"
+            android:text="intro" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagv_pic_right"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:text="title"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/light_black"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/mvad_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_title_right"
+            android:layout_alignParentRight="true"
+            android:text="推广"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@color/blue_ad_bg"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

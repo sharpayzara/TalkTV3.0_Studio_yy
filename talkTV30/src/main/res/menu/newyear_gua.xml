@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_my_gift"
+        android:actionProviderClass="com.sumavision.talktv2.activity.help.TextActionProvider"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/my_prize">
+    </item>
+    <item
+        android:id="@+id/action_list"
+        android:actionProviderClass="com.sumavision.talktv2.activity.help.TextActionProvider"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/winner_list">
+    </item>
+
+</menu>

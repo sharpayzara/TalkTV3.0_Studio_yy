@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_bar_custom"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/navigator_bg" >
+
+    <ImageView
+        android:id="@+id/imgv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_menu" />
+    
+    <ImageButton
+        android:id="@+id/iv_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imgv_logo"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:scaleType="center"
+        android:src="@drawable/newyear_logo" />
+
+    <ImageButton
+        android:id="@+id/iv_advert"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@+id/action_search"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_advert" 
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/action_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@+id/action_history"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_search" />
+
+    <ImageView
+        android:id="@+id/action_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:layout_toLeftOf="@+id/action_cache"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_history" />
+
+    <ImageView
+        android:id="@+id/action_cache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/ic_action_bg"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_cache" />
+
+</RelativeLayout>

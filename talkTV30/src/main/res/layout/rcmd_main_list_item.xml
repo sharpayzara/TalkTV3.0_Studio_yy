@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rmcd_main_list_item_top_"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/rcmd_bottom_common_padding" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rcmd_header_bg"
+        android:minHeight="42dp"
+        android:paddingLeft="@dimen/padding_all"
+        android:paddingRight="@dimen/padding_all" >
+
+        <ImageView
+            android:id="@+id/rmcd_main_list_item_top_pic"
+            android:layout_width="21dip"
+            android:layout_height="21dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rcmd_all_tips_pic" />
+
+        <!-- 栏目名 -->
+
+        <TextView
+            android:id="@+id/rmcd_main_list_item_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rmcd_main_list_item_top_pic"
+            android:maxLines="1"
+            android:textColor="@color/navigator_bg_color"
+            android:textSize="16sp" />
+
+        <!-- 标签3 -->
+
+        <TextView
+            android:id="@+id/rmcd_main_list_item_top_arrow_tips2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_toLeftOf="@+id/rmcd_main_list_item_top_arrow_tips1"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="@string/rcmd_title_more"
+            android:visibility="gone"
+            android:textColor="@color/light_black"
+            android:textSize="13sp" />
+        <!-- 标签2 -->
+
+        <TextView
+            android:id="@+id/rmcd_main_list_item_top_arrow_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_toLeftOf="@+id/rmcd_main_list_item_top_arrow_tips"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="@string/rcmd_title_more"
+            android:visibility="gone"
+            android:textColor="@color/light_black"
+            android:textSize="13sp" />
+        <!-- 标签1 -->
+
+        <TextView
+            android:id="@+id/rmcd_main_list_item_top_arrow_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="@string/rcmd_title_more"
+            android:visibility="gone"
+            android:textColor="@color/light_black"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/rmcd_main_list_item_top_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rmcd_main_list_item_top_name"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rcmd_title_tip" />
+    </RelativeLayout>
+
+</LinearLayout>

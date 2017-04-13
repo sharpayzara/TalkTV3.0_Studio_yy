@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="menu_text_size">18sp</dimen>
+    <dimen name="channel_type_text">16sp</dimen>
+    <dimen name="cache_text">16sp</dimen>
+    <dimen name="slide_memu_text">16sp</dimen>
+
+</resources>

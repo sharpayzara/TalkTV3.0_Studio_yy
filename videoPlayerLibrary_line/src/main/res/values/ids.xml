@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <item name="videoviewholder" type="id"></item> -->
+    <!-- <item name="video_view" type="id"></item> -->
+    <!-- <item name="progress_layout" type="id"></item> -->
+    <!-- <item name="progressBar" type="id"></item> -->
+    <!-- <item name="loadingTextView" type="id"></item> -->
+    <!-- <item name="netSpeedView" type="id"></item> -->
+    <!-- <item name="controlbar" type="id"></item> -->
+    <!-- <item name="time_current" type="id"></item> -->
+    <!-- <item name="time_total" type="id"></item> -->
+    <!-- <item name="media_progress" type="id"></item> -->
+    <!-- <item name="live_bg" type="id"></item> -->
+    <!-- <item name="media_status" type="id"></item> -->
+    <!-- <item name="voice_controll" type="id"></item> -->
+    <!-- <item name="voice_ishas" type="id"></item> -->
+    <!-- <item name="voice_progress" type="id"></item> -->
+    <!-- <item name="root1" type="id"></item> -->
+
+</resources>

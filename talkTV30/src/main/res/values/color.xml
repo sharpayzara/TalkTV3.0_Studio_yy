@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="activity_bg_color">#e9e9e9</color>
+    <color name="biz_pc_list_offline_processbar">#ffaa0000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#555555</color>
+    <color name="light_gray">#dddddd</color>
+    <color name="black_trans">#a1000000</color>
+    <color name="menu_bg">#678297</color>
+    <color name="moneygreen">#6d912f</color>
+    <color name="blue">#729DC8</color>
+    <color name="channle_type_orange">#ff8c55</color>
+    <color name="red">#E72722</color>
+    <color name="green">#7fffd4</color>
+    <color name="yellow">#D69251</color>
+    <color name="light_transparent_gray">#80ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="tag_default">#585d5e</color>
+    <color name="listview_normal">#d6d6d6</color>
+    <color name="list_transparent">#00000000</color>
+    <color name="search_hint_color">#aaaaaa</color>
+    <color name="pd_video_default">#b51225</color>
+    <color name="rcmd_tag_color">#2f2f2f</color>
+    <color name="jishu_textColor">#7c7c7c</color>
+    <color name="list_header_textColor">#7c7c7c</color>
+    <color name="player_title_color">#ffffff</color>
+    <color name="base_color_balck">#383838</color>
+    <color name="base_color_gray">#7c7c7c</color>
+    <color name="channel_add">#c24d37</color>
+    <color name="channel_delete">#888786</color>
+    <color name="behind_color">#2b2c30</color>
+    <color name="menu_title_color">#999999</color>
+    <color name="menu_item_color">#cccccc</color>
+    <color name="menu_login_layout">#cccccc</color>
+    <color name="menu_search_txt_color">#bbbbbb</color>
+    <color name="errtextcolor">#7c7c7c</color>
+    <color name="gray">#888888</color>
+    <color name="actionbar_bar_bg">#e9e9e9</color>
+    <color name="actionbar_tab_txt_color">#db5b4c</color>
+    <color name="actionbar_item_btn_normal">#b43622</color>
+    <color name="actionbar_item_btn_pressed">#6d0000</color>
+    <color name="navigator_bg_color">#b43622</color>
+    <color name="programdetail_txt_color">#888888</color>
+    <color name="pd_color">#888888</color>
+    <color name="pd_tag_color">#444444</color>
+    <color name="program_cache_episode_list_bottom_color">#545454</color>
+    <color name="scroll_text_color">#b43622</color>
+
+    <!-- ummeng  使用 -->
+    <color name="body_text_1">#ff000000</color>
+    <color name="body_text_2">#99000000</color>
+    <color name="body_text_disabled">#66000000</color>
+    <color name="body_text_1_inverse">#ffffffff</color>
+    <color name="body_text_2_inverse">#99ffffff</color>
+    <color name="accent_1">#ff29549f</color>
+    <color name="hyperlink">#ffff549f</color>
+    <color name="background_1">#ffffffff</color>
+    <color name="whats_on_separator">#4d000000</color>
+    <color name="all_track_color">#ff222222</color>
+    <color name="block_column_1">#ff0fabff</color>
+    <color name="block_column_2">#ffdf1831</color>
+    <color name="block_column_3">#ff009939</color>
+
+    <!-- 急诊室专题 -->
+    <color name="emergency_title_color">#363636</color>
+    <color name="emergency_detail_color">#989595</color>
+    <color name="emergency_btn_bg_color">#4f85be</color>
+    <color name="emergency_rim_detail_color">#212121</color>
+    <color name="emergency_image_txt_color">#88000000</color>
+    <color name="emergency_image_bottom_color">#888888</color>
+
+    <color name="cache_disable">#888888</color>
+    <color name="cache_selected">@color/white</color>
+    <color name="activity_bg_colors">#00ffffff</color>
+    <color name="gift_receiver_update">#107ec4</color>
+    <color name="gift_unreceive">#b33521</color>
+    <color name="gift_received">#c1c1c1</color>
+    <color name="guess_option_selected">#fe4545</color>
+    <color name="gift_point">#FFFF00</color>
+    <color name="gold_userspace">#FF9203</color>
+    <color name="diamond_userspace">#429FFF</color>
+    <color name="guess_diamond">#2491FE</color>
+    <color name="interactive_intime_divider">#47b321</color>
+    <color name="guess_point">#FF8400</color>
+    <color name="store">#2493e8</color>
+    <color name="forget_check_text">#333333</color>
+    <color name="forget_hint">#b2b2b2</color>
+    <color name="login_btn_color">#b33421</color>
+    <color name="login_detail_bg">#ffffff</color>
+    <color name="register_xieyi">#2891d4</color>
+    <color name="user_name">#373737</color>
+    <color name="shop_text">#1a1a1a</color>
+    <color name="userinfo_email_bg">#f2f1f1</color>
+    <color name="shop_item_score">#f2d742</color>
+    <color name="shop_item_name">#ffffff</color>
+    <color name="interactive_btn_pressed">#d8d8d8</color>
+    <color name="interactive_text_normal">#ff2f2f2f</color>
+    <color name="userinfo_color_bg">#e9e9e9</color>
+    <color name="point_group_title">#b43623</color>
+    <color name="point_child_left">#4a4a4a</color>
+    <color name="point_child_middle">#fe9211</color>
+    <color name="point_child_right">#b43623</color>
+    <color name="userinfo_point">#ff9102</color>
+    <color name="userinfo_diamond">#3d88d8</color>
+    <color name="half_transparent">#7fffffff</color>
+    <color name="guess_chked_stroke">#fff000</color>
+    <color name="guess_team_name">#545454</color>
+    <color name="myaccount_edt_enable">#cccccc</color>
+    <color name="slide_menu_bg">#32313a</color>
+    <color name="slide_menu_item_selected_bg">#272532</color>
+    <color name="channel_program_odd">#f1f1f1</color>
+    <color name="fav_item_pressed">#dddddd</color>
+    <color name="channel_program_text">#555555</color>
+    <color name="private_msg_text_default">#383838</color>
+    <color name="live_blue">#5fd5ff</color>
+    <color name="live_gray">#D3D3D3</color>
+    <color name="newyear_text">#782c01</color>
+    
+    <color name="invited_friend">#FFCE54</color>
+    <color name="got_vip_time">#FC6E51</color>
+    <color name="left_vip_time">#ED5565</color>
+
+    <color name="blue_ad_bg">#167FFF</color>
+
+</resources>

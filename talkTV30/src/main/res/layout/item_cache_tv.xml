@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" 
+        android:background="@drawable/item_programhalf">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:text="34"
+            android:textColor="@color/program_grid_text"
+            android:textSize="14sp" />
+
+        <ImageView
+	        android:id="@+id/img"
+	        android:scaleType="fitXY"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:paddingBottom="2dp"
+	        android:paddingRight="2dp"
+	        android:src="@drawable/cache_juji_focus"
+	        android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/user_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/list_headpic_default"/>
+    <ImageView
+        android:id="@+id/user_vip_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vip_mark"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

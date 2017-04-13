@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/pdhe_episode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/pdhe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/light_black"
+            android:text="剧集来源：" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/pdhe_name"
+            android:layout_toLeftOf="@+id/pdhp_statement"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/pdhe_plat_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_source_default"/>
+            <TextView
+                android:id="@+id/pdhe_plat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@drawable/arrow_down"
+                android:drawablePadding="5dp"
+                android:text=""/>
+        </LinearLayout>
+        <!--<Spinner-->
+            <!--android:id="@+id/pdhe_source_spinner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:spinnerMode="dropdown"-->
+            <!--android:layout_toLeftOf="@+id/pdhp_statement"-->
+            <!--android:layout_toRightOf="@+id/pdhe_name" />-->
+
+        <TextView
+            android:id="@+id/pdhp_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="5dp"
+            android:text="免责声明"
+            android:textColor="@color/navigator_bg_color"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dddddd"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <com.sumavision.talktv2.components.HorizontalListView2
+        android:id="@+id/pdhp_sourcelist"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"/>
+
+
+    <com.sumavision.talktv2.components.StaticListView
+        android:id="@+id/pdhe_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:divider="@null"
+        android:layout_margin="10dp"
+        android:visibility="gone" />
+
+    <com.sumavision.talktv2.components.StaticGridView
+        android:id="@+id/pdhe_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@drawable/transparent_background"
+        android:numColumns="5"
+        android:layout_margin="10dp"
+        android:verticalSpacing="12dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/pdhe_more"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="更多"
+        android:background="@drawable/button_normal_bg"
+        android:textColor="@color/light_black"
+        android:textSize="12sp" />
+</LinearLayout>

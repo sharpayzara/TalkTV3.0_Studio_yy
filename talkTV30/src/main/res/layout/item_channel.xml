@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip"
+    android:background="@drawable/channel_list_item_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/layout_goplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/infoBtn"
+        android:background="@drawable/btn_reply_bg"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/tvframe"
+            android:layout_width="76dip"
+            android:layout_height="66dip"
+            android:layout_centerVertical="true"
+            android:paddingTop="6dp"
+            android:background="@color/transparent" >
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/channel_tv_logo_default"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/light_black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@id/tvframe"
+            android:textColor="#7c7c7c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/channel_program_name_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/tvframe"
+            android:layout_below="@id/time"
+            android:maxLines="2"
+            android:textColor="@color/light_black"
+            android:singleLine="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/infoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:padding="6dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_program_bg"
+        android:text="节目单"
+        android:textSize="11sp"
+        android:textColor="@color/live_programlist_text"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>
